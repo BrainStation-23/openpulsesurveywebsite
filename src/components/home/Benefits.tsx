@@ -1,4 +1,5 @@
 
+import { useEffect, useRef } from "react";
 import {
   Shield,
   BarChart,
@@ -48,6 +49,35 @@ const benefits = [
 ];
 
 const Benefits = () => {
+  const benefitsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && benefitsRef.current) {
+          const cards = benefitsRef.current.querySelectorAll('.feature-card');
+          cards.forEach((card, index) => {
+            setTimeout(() => {
+              card.classList.add('animate-fade-in');
+              card.classList.remove('opacity-0');
+            }, index * 100); // Stagger the animation by 100ms per card
+          });
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (benefitsRef.current) {
+      observer.observe(benefitsRef.current);
+    }
+
+    return () => {
+      if (benefitsRef.current) {
+        observer.unobserve(benefitsRef.current);
+      }
+    };
+  }, []);
+
   return (
     <section className="section bg-white">
       <div className="container-tight">
@@ -60,10 +90,14 @@ const Benefits = () => {
             Open Pulse Survey combines powerful feedback collection tools with enterprise-grade security, giving you complete ownership of your employee engagement data.
           </p>
         </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+        <div ref={benefitsRef} className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
             {benefits.map((benefit) => (
-              <div key={benefit.name} className="feature-card flex flex-col animate-fade-in">
+              <div 
+                key={benefit.name} 
+                className="feature-card flex flex-col opacity-0"
+                style={{ transitionDuration: '300ms' }}
+              >
                 <dt className="flex items-center gap-x-3 text-lg font-semibold leading-7 text-gray-900">
                   <benefit.icon className="h-6 w-6 flex-none text-blue-500" aria-hidden="true" />
                   {benefit.name}

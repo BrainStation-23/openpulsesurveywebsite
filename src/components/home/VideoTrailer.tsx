@@ -6,12 +6,6 @@ const VideoTrailer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const videoId = "Fd2kLIVAJVw";
   
-  // This ensures the YouTube iframe API is loaded only once
-  useEffect(() => {
-    // Clean up the iframe when unmounting
-    return () => setIsPlaying(false);
-  }, []);
-
   return (
     <section className="section bg-gray-50">
       <div className="container-tight">
@@ -28,11 +22,14 @@ const VideoTrailer = () => {
         <div className="relative mx-auto max-w-4xl">
           {!isPlaying ? (
             <div className="relative aspect-video bg-gray-100 rounded-xl overflow-hidden shadow-lg">
-              {/* YouTube thumbnail with play button overlay */}
+              {/* Optimized YouTube thumbnail with width/height and loading attributes */}
               <img 
                 src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`} 
                 alt="Video thumbnail" 
                 className="w-full h-full object-cover"
+                width="1280"
+                height="720"
+                loading="lazy"
               />
               <div 
                 className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 hover:bg-opacity-30 cursor-pointer transition-all duration-300"

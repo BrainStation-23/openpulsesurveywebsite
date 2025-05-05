@@ -9,24 +9,27 @@ import VideoTrailer from "@/components/home/VideoTrailer";
 import CTA from "@/components/home/CTA";
 import { useEffect } from "react";
 
+// Pre-define structured data to avoid runtime calculations
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Open Pulse Survey",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "All",
+  "description": "A self-hosted employee feedback platform for HR professionals and management teams that keeps internal data secure.",
+  "offers": {
+    "@type": "Offer",
+    "price": "Custom pricing",
+    "priceCurrency": "USD"
+  }
+};
+
 const Index = () => {
   // Add structured data for SEO
   useEffect(() => {
     const script = document.createElement('script');
     script.type = 'application/ld+json';
-    script.innerHTML = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Open Pulse Survey",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "All",
-      "description": "A self-hosted employee feedback platform for HR professionals and management teams that keeps internal data secure.",
-      "offers": {
-        "@type": "Offer",
-        "price": "Custom pricing",
-        "priceCurrency": "USD"
-      }
-    });
+    script.innerHTML = JSON.stringify(structuredData);
     document.head.appendChild(script);
     
     return () => {
