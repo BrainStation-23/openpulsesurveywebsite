@@ -19,7 +19,7 @@ const HeroSection = () => {
             </div>
             <div className="flex flex-col items-center">
               <div className="bg-white/10 p-4 rounded-full">
-                <i className="devicon-postgresql-plain colored text-4xl"></i>
+                <i className="devicon-supabase-plain colored text-4xl"></i>
               </div>
               <span className="mt-2 text-white font-medium">Supabase</span>
             </div>
