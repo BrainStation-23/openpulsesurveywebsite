@@ -7,6 +7,7 @@ import DeploymentOptions from "@/components/technical/DeploymentOptions";
 import SecurityAndCompliance from "@/components/technical/SecurityAndCompliance";
 import TechnicalFAQ from "@/components/technical/TechnicalFAQ";
 import ContactCTA from "@/components/technical/ContactCTA";
+import DevIconLoader from "@/components/technical/DevIconLoader";
 
 const Technical = () => {
   return (
@@ -14,6 +15,7 @@ const Technical = () => {
       title="Technical Details | Open Pulse Survey"
       description="Learn about the technical architecture, deployment options, and security features of Open Pulse Survey, the self-hosted employee feedback platform."
     >
+      <DevIconLoader />
       {/* Hero Section */}
       <HeroSection />
 

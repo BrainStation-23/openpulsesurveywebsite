@@ -1,4 +1,3 @@
-
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Cloud } from "lucide-react";
 
@@ -107,21 +106,21 @@ const DeploymentOptions = () => {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
               <div className="p-4 bg-gray-50 rounded flex flex-col items-center justify-center">
                 <div className="bg-blue-50 p-3 rounded-full mb-2">
-                  <Cloud className="h-6 w-6 text-blue-600" />
+                  <i className="devicon-amazonwebservices-plain colored text-4xl"></i>
                 </div>
                 <span className="font-medium text-gray-800 mb-1">AWS</span>
                 <span className="text-xs text-gray-500">Amazon Web Services</span>
               </div>
               <div className="p-4 bg-gray-50 rounded flex flex-col items-center justify-center">
                 <div className="bg-blue-50 p-3 rounded-full mb-2">
-                  <Cloud className="h-6 w-6 text-blue-700" />
+                  <i className="devicon-azure-plain colored text-4xl"></i>
                 </div>
                 <span className="font-medium text-gray-800 mb-1">Azure</span>
                 <span className="text-xs text-gray-500">Microsoft Azure</span>
               </div>
               <div className="p-4 bg-gray-50 rounded flex flex-col items-center justify-center">
                 <div className="bg-blue-50 p-3 rounded-full mb-2">
-                  <Cloud className="h-6 w-6 text-green-600" />
+                  <i className="devicon-googlecloud-plain colored text-4xl"></i>
                 </div>
                 <span className="font-medium text-gray-800 mb-1">GCP</span>
                 <span className="text-xs text-gray-500">Google Cloud Platform</span>

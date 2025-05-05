@@ -1,5 +1,3 @@
-
-import { Code, Database, Lock, Server } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const OpenSourceStack = () => {
@@ -9,7 +7,7 @@ const OpenSourceStack = () => {
         <Card className="overflow-hidden border-blue-100">
           <div className="bg-blue-50 p-6 flex items-center gap-4 border-b border-blue-100">
             <div className="bg-white p-3 rounded-lg shadow-sm">
-              <Code className="h-8 w-8 text-blue-500" />
+              <i className="devicon-react-original colored text-4xl"></i>
             </div>
             <div>
               <h3 className="text-xl font-semibold text-blue-900">Frontend: React</h3>
@@ -49,7 +47,7 @@ const OpenSourceStack = () => {
         <Card className="overflow-hidden border-green-100">
           <div className="bg-green-50 p-6 flex items-center gap-4 border-b border-green-100">
             <div className="bg-white p-3 rounded-lg shadow-sm">
-              <Database className="h-8 w-8 text-green-500" />
+              <i className="devicon-postgresql-plain colored text-4xl"></i>
             </div>
             <div>
               <h3 className="text-xl font-semibold text-green-900">Backend: Supabase</h3>

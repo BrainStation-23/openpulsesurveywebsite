@@ -1,6 +1,4 @@
 
-import { Code, Database } from "lucide-react";
-
 const HeroSection = () => {
   return (
     <section className="bg-gradient-to-b from-gray-900 to-gray-800 py-24 sm:py-32">
@@ -15,13 +13,13 @@ const HeroSection = () => {
           <div className="mt-10 flex justify-center gap-8">
             <div className="flex flex-col items-center">
               <div className="bg-white/10 p-4 rounded-full">
-                <Code className="h-8 w-8 text-blue-300" />
+                <i className="devicon-react-original colored text-4xl"></i>
               </div>
               <span className="mt-2 text-white font-medium">React</span>
             </div>
             <div className="flex flex-col items-center">
               <div className="bg-white/10 p-4 rounded-full">
-                <Database className="h-8 w-8 text-green-300" />
+                <i className="devicon-postgresql-plain colored text-4xl"></i>
               </div>
               <span className="mt-2 text-white font-medium">Supabase</span>
             </div>
