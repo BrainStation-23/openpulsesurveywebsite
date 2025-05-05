@@ -59,7 +59,7 @@ const Footer = () => {
                 <a href="#" className="text-base text-gray-600 hover:text-blue-500">Blog</a>
               </li>
               <li>
-                <a href="#" className="text-base text-gray-600 hover:text-blue-500">Documentation</a>
+                <a href="https://docs.openpulsesurvey.com/" className="text-base text-gray-600 hover:text-blue-500">Documentation</a>
               </li>
             </ul>
           </div>
