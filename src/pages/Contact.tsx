@@ -1,8 +1,6 @@
-
 import { useEffect } from 'react';
 import Layout from "@/components/layout/Layout";
 import { Mail, Shield, Clock, CheckCircle } from "lucide-react";
-
 declare global {
   interface Window {
     hbspt: {
@@ -17,7 +15,6 @@ declare global {
     };
   }
 }
-
 const Contact = () => {
   useEffect(() => {
     // Load HubSpot script
@@ -27,7 +24,6 @@ const Contact = () => {
     script.type = "text/javascript";
     script.async = true;
     document.body.appendChild(script);
-
     script.onload = () => {
       if (window.hbspt) {
         window.hbspt.forms.create({
@@ -38,7 +34,6 @@ const Contact = () => {
         });
       }
     };
-
     return () => {
       // Clean up script on unmount
       document.body.removeChild(script);
@@ -52,14 +47,11 @@ const Contact = () => {
     "name": "Open Pulse Survey",
     "url": window.location.origin
   };
-
-  return (
-    <Layout
-      title="Contact Us | Open Pulse Survey"
-      description="Get in touch with our team to learn how Open Pulse Survey can help your organization collect and act on employee feedback securely."
-    >
+  return <Layout title="Contact Us | Open Pulse Survey" description="Get in touch with our team to learn how Open Pulse Survey can help your organization collect and act on employee feedback securely.">
       {/* Add structured data */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactStructuredData) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{
+      __html: JSON.stringify(contactStructuredData)
+    }} />
       
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-blue-50 to-white py-16 sm:py-24">
@@ -102,7 +94,7 @@ const Contact = () => {
                 
                 <div className="space-y-6">
                   <div className="flex gap-4">
-                    <div className="flex-none bg-blue-50 p-3 rounded-full">
+                    <div className="flex-none bg-blue-50 p-3 square-full">
                       <Shield className="h-6 w-6 text-blue-600" />
                     </div>
                     <div>
@@ -164,8 +156,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default Contact;
