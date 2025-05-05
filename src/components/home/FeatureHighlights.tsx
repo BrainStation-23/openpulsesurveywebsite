@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const FeatureHighlights = () => {
   return (
-    <section className="section bg-white">
+    <section className="py-16 md:py-24 bg-white">
       <div className="container-tight">
         <div className="mx-auto max-w-2xl md:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-500">Key Capabilities</h2>

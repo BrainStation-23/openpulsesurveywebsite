@@ -117,7 +117,7 @@ const Features = () => {
       </section>
 
       {/* Features Grid by Category */}
-      <section className="section bg-white">
+      <section className="bg-white py-16 md:py-24">
         <div className="container-tight">
           <div className="space-y-24">
             {featureCategories.map((category, idx) => (
@@ -133,7 +133,7 @@ const Features = () => {
 
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
                   {category.features.map((feature, i) => (
-                    <div key={i} className="feature-card flex flex-col">
+                    <div key={i} className="flex flex-col bg-white p-6 rounded-lg shadow-md border border-gray-100">
                       <div>
                         <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500">
                           <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
@@ -192,7 +192,7 @@ const Features = () => {
       </section>
 
       {/* CTA */}
-      <section className="section bg-blue-600">
+      <section className="bg-blue-600 py-16 md:py-24">
         <div className="container-tight">
           <div className="mx-auto max-w-2xl md:text-center">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
