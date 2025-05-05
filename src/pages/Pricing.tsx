@@ -43,9 +43,8 @@ const Pricing = () => {
             </p>
             
             {/* Free Trial Highlight Banner */}
-            <div className="mt-10 rounded-xl overflow-hidden shadow-xl animate-pulse">
+            <div className="mt-10 rounded-xl overflow-hidden shadow-xl">
               <div className="bg-gradient-to-r from-purple-500 to-indigo-600 px-6 py-4 text-center">
-                <Badge variant="outline" className="mb-2 bg-white/20 text-white border-white/40">Limited Time Offer</Badge>
                 <h2 className="text-2xl font-bold text-white">3-Month Free Trial</h2>
                 <p className="text-white/90 mt-1">For companies with 123+ employees</p>
               </div>
