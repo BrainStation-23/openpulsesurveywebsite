@@ -13,6 +13,7 @@ import Technical from "./pages/Technical";
 import Contact from "./pages/Contact";
 import Pricing from "./pages/Pricing";
 import ThankYou from "./pages/ThankYou";
+import AboutUs from "./pages/AboutUs";
 import ScrollToTop from "./components/common/ScrollToTop";
 import ScrollToTopButton from "./components/common/ScrollToTopButton";
 
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/thank-you" element={<ThankYou />} />
+          <Route path="/about-us" element={<AboutUs />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <ScrollToTopButton />
