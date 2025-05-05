@@ -13,6 +13,8 @@ import Technical from "./pages/Technical";
 import Contact from "./pages/Contact";
 import Pricing from "./pages/Pricing";
 import ThankYou from "./pages/ThankYou";
+import ScrollToTop from "./components/common/ScrollToTop";
+import ScrollToTopButton from "./components/common/ScrollToTopButton";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +22,7 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <BrowserRouter>
       <TooltipProvider>
+        <ScrollToTop />
         <Toaster />
         <Sonner />
         <Routes>
@@ -33,6 +36,7 @@ const App = () => (
           <Route path="/thank-you" element={<ThankYou />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <ScrollToTopButton />
       </TooltipProvider>
     </BrowserRouter>
   </QueryClientProvider>
