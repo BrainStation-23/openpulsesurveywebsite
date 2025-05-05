@@ -18,7 +18,7 @@ const CTA = () => {
               <Link to="/contact">Request a Demo</Link>
             </Button>
             <Button asChild variant="ghost" className="text-white hover:bg-blue-500">
-              <Link to="/features">Learn More</Link>
+              <Link to="/pricing">View Pricing</Link>
             </Button>
           </div>
         </div>

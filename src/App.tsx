@@ -11,6 +11,7 @@ import AntiSaas from "./pages/AntiSaas";
 import UseCases from "./pages/UseCases";
 import Technical from "./pages/Technical";
 import Contact from "./pages/Contact";
+import Pricing from "./pages/Pricing";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/use-cases" element={<UseCases />} />
           <Route path="/technical" element={<Technical />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/pricing" element={<Pricing />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </TooltipProvider>
