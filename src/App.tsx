@@ -1,22 +1,32 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/common/ScrollToTop";
 import ScrollToTopButton from "./components/common/ScrollToTopButton";
-import Features from "./pages/Features";
-import AntiSaas from "./pages/AntiSaas";
-import UseCases from "./pages/UseCases";
-import Technical from "./pages/Technical";
-import Contact from "./pages/Contact";
-import Pricing from "./pages/Pricing";
-import ThankYou from "./pages/ThankYou";
-import AboutUs from "./pages/AboutUs";
+import LazyRoute from "./components/routing/LazyRoute";
+import React from "react";
 
-const queryClient = new QueryClient();
+// Lazy load all pages
+const Index = React.lazy(() => import("./pages/Index"));
+const NotFound = React.lazy(() => import("./pages/NotFound"));
+const Features = React.lazy(() => import("./pages/Features"));
+const AntiSaas = React.lazy(() => import("./pages/AntiSaas"));
+const UseCases = React.lazy(() => import("./pages/UseCases"));
+const Technical = React.lazy(() => import("./pages/Technical"));
+const Contact = React.lazy(() => import("./pages/Contact"));
+const Pricing = React.lazy(() => import("./pages/Pricing"));
+const ThankYou = React.lazy(() => import("./pages/ThankYou"));
+const AboutUs = React.lazy(() => import("./pages/AboutUs"));
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false, // Improves performance by avoiding unnecessary refetches
+      retry: 1, // Limit retries for failed queries
+    },
+  },
+});
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -25,16 +35,16 @@ const App = () => (
         <ScrollToTop />
         <Toaster />
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/features" element={<Features />} />
-          <Route path="/anti-saas" element={<AntiSaas />} />
-          <Route path="/use-cases" element={<UseCases />} />
-          <Route path="/technical" element={<Technical />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/pricing" element={<Pricing />} />
-          <Route path="/thank-you" element={<ThankYou />} />
-          <Route path="/about-us" element={<AboutUs />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/" element={<LazyRoute component={Index} />} />
+          <Route path="/features" element={<LazyRoute component={Features} />} />
+          <Route path="/anti-saas" element={<LazyRoute component={AntiSaas} />} />
+          <Route path="/use-cases" element={<LazyRoute component={UseCases} />} />
+          <Route path="/technical" element={<LazyRoute component={Technical} />} />
+          <Route path="/contact" element={<LazyRoute component={Contact} />} />
+          <Route path="/pricing" element={<LazyRoute component={Pricing} />} />
+          <Route path="/thank-you" element={<LazyRoute component={ThankYou} />} />
+          <Route path="/about-us" element={<LazyRoute component={AboutUs} />} />
+          <Route path="*" element={<LazyRoute component={NotFound} />} />
         </Routes>
         <ScrollToTopButton />
       </TooltipProvider>
