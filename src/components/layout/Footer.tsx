@@ -1,12 +1,14 @@
+
 import { Link } from 'react-router-dom';
+import Logo from './Logo';
+
 const Footer = () => {
-  return <footer className="bg-gray-50 border-t border-gray-200">
+  return (
+    <footer className="bg-gray-50 border-t border-gray-200">
       <div className="container-tight py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
           <div className="col-span-1 md:col-span-3 lg:col-span-2">
-            <Link to="/" className="inline-block">
-              <span className="text-2xl font-bold text-blue-500">Open Pulse Survey</span>
-            </Link>
+            <Logo />
             <p className="mt-4 text-base text-gray-600 max-w-md">
               Collect and act on employee feedback while keeping your internal data secure. Open Pulse Survey is your self-hosted employee feedback platform.
             </p>
@@ -31,6 +33,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
+          
           <div>
             <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase">Platform</h3>
             <ul className="mt-4 space-y-4">
@@ -45,6 +48,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+          
           <div>
             <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase">Resources</h3>
             <ul className="mt-4 space-y-4">
@@ -59,6 +63,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+          
           <div>
             <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase">Company</h3>
             <ul className="mt-4 space-y-4">
@@ -74,10 +79,13 @@ const Footer = () => {
             </ul>
           </div>
         </div>
+        
         <div className="mt-12 border-t border-gray-200 pt-8">
           <p className="text-base text-gray-500">&copy; {new Date().getFullYear()} Open Pulse Survey. All rights reserved.</p>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;
