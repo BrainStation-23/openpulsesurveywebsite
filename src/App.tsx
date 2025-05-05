@@ -12,6 +12,7 @@ import UseCases from "./pages/UseCases";
 import Technical from "./pages/Technical";
 import Contact from "./pages/Contact";
 import Pricing from "./pages/Pricing";
+import ThankYou from "./pages/ThankYou";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/technical" element={<Technical />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/pricing" element={<Pricing />} />
+          <Route path="/thank-you" element={<ThankYou />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </TooltipProvider>
