@@ -1,5 +1,5 @@
 
-import { Code, Database } from "lucide-react";
+import { Code, Database, Lock, Server } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const OpenSourceStack = () => {
