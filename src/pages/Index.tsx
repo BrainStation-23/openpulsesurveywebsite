@@ -5,6 +5,7 @@ import Benefits from "@/components/home/Benefits";
 import AudienceSplit from "@/components/home/AudienceSplit";
 import FeatureHighlights from "@/components/home/FeatureHighlights";
 import Testimonials from "@/components/home/Testimonials";
+import VideoTrailer from "@/components/home/VideoTrailer";
 import CTA from "@/components/home/CTA";
 import { useEffect } from "react";
 
@@ -39,6 +40,7 @@ const Index = () => {
       <Benefits />
       <AudienceSplit />
       <FeatureHighlights />
+      <VideoTrailer />
       <Testimonials />
       <CTA />
     </Layout>
