@@ -3,13 +3,23 @@ import React, { useEffect } from 'react';
 
 const DevIconLoader = () => {
   useEffect(() => {
-    const link = document.createElement('link');
-    link.href = 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css';
-    link.rel = 'stylesheet';
-    document.head.appendChild(link);
+    // Check if the link element already exists to prevent duplicates
+    const existingLink = document.querySelector('link[href*="devicon.min.css"]');
+    
+    if (!existingLink) {
+      const link = document.createElement('link');
+      link.href = 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css';
+      link.rel = 'stylesheet';
+      link.id = 'devicon-stylesheet';
+      document.head.appendChild(link);
+    }
 
     return () => {
-      document.head.removeChild(link);
+      // Only remove if this component added it
+      const linkElement = document.getElementById('devicon-stylesheet');
+      if (linkElement && !document.querySelector('[data-page="technical"]')) {
+        document.head.removeChild(linkElement);
+      }
     };
   }, []);
 

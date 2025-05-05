@@ -1,7 +1,7 @@
 
 const HeroSection = () => {
   return (
-    <section className="bg-gradient-to-b from-gray-900 to-gray-800 py-24 sm:py-32">
+    <section className="bg-gradient-to-b from-gray-900 to-gray-800 py-24 sm:py-32 -mx-4 sm:-mx-6 mb-16">
       <div className="container-tight">
         <div className="mx-auto max-w-2xl text-center">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
