@@ -95,64 +95,65 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Trust signals - smaller column */}
+            {/* Trust signals - smaller column - IMPROVED DESIGN */}
             <div className="lg:col-span-5 mt-10 lg:mt-0">
               <div className="sticky top-8">
                 <h3 className="text-xl font-semibold mb-6 text-gray-900">Why reach out to us?</h3>
                 
-                <div className="space-y-6">
-                  <div className="flex gap-4">
-                    <div className="flex-none bg-blue-50 p-3 rounded-full">
-                      <Shield className="h-6 w-6 text-blue-600" />
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-gray-900">No spam guarantee</h4>
-                      <p className="mt-1 text-gray-600">
-                        We'll only contact you about Open Pulse Survey and your inquiry. No marketing emails.
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex gap-4">
-                    <div className="flex-none bg-blue-50 p-3 rounded-full">
-                      <Clock className="h-6 w-6 text-blue-600" />
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-gray-900">Quick response time</h4>
-                      <p className="mt-1 text-gray-600">
-                        Our team typically responds within one business day to all inquiries.
-                      </p>
+                <div className="space-y-5">
+                  {/* Redesigned items with icons inline instead of in capsules */}
+                  <div className="bg-blue-50 rounded-lg p-4 shadow-sm transition-all hover:shadow-md">
+                    <div className="flex items-start gap-3">
+                      <Shield className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
+                      <div>
+                        <h4 className="font-medium text-gray-900 mb-1">No spam guarantee</h4>
+                        <p className="text-gray-600 text-sm">
+                          We'll only contact you about Open Pulse Survey and your inquiry. No marketing emails.
+                        </p>
+                      </div>
                     </div>
                   </div>
                   
-                  <div className="flex gap-4">
-                    <div className="flex-none bg-blue-50 p-3 rounded-full">
-                      <CheckCircle className="h-6 w-6 text-blue-600" />
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-gray-900">Tailored solutions</h4>
-                      <p className="mt-1 text-gray-600">
-                        We'll provide personalized guidance based on your organization's needs.
-                      </p>
+                  <div className="bg-blue-50 rounded-lg p-4 shadow-sm transition-all hover:shadow-md">
+                    <div className="flex items-start gap-3">
+                      <Clock className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
+                      <div>
+                        <h4 className="font-medium text-gray-900 mb-1">Quick response time</h4>
+                        <p className="text-gray-600 text-sm">
+                          Our team typically responds within one business day to all inquiries.
+                        </p>
+                      </div>
                     </div>
                   </div>
                   
-                  <div className="flex gap-4">
-                    <div className="flex-none bg-blue-50 p-3 rounded-full">
-                      <Mail className="h-6 w-6 text-blue-600" />
+                  <div className="bg-blue-50 rounded-lg p-4 shadow-sm transition-all hover:shadow-md">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
+                      <div>
+                        <h4 className="font-medium text-gray-900 mb-1">Tailored solutions</h4>
+                        <p className="text-gray-600 text-sm">
+                          We'll provide personalized guidance based on your organization's needs.
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="font-medium text-gray-900">Direct conversation</h4>
-                      <p className="mt-1 text-gray-600">
-                        Your message goes directly to our team, not a generic inbox.
-                      </p>
+                  </div>
+                  
+                  <div className="bg-blue-50 rounded-lg p-4 shadow-sm transition-all hover:shadow-md">
+                    <div className="flex items-start gap-3">
+                      <Mail className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
+                      <div>
+                        <h4 className="font-medium text-gray-900 mb-1">Direct conversation</h4>
+                        <p className="text-gray-600 text-sm">
+                          Your message goes directly to our team, not a generic inbox.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="mt-10 p-5 bg-blue-50 rounded-xl">
+                <div className="mt-8 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-5 shadow-sm">
                   <h4 className="font-semibold text-gray-900 mb-3">What happens next?</h4>
-                  <ol className="ml-5 space-y-3 text-gray-600 list-decimal">
+                  <ol className="ml-5 space-y-2 text-gray-600 text-sm list-decimal">
                     <li>We'll review your request and contact you via email</li>
                     <li>If needed, we'll schedule a call to discuss your requirements</li>
                     <li>We'll prepare a personalized demo tailored to your organization</li>
