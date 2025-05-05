@@ -1,13 +1,47 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import Layout from "@/components/layout/Layout";
+import Hero from "@/components/home/Hero";
+import Benefits from "@/components/home/Benefits";
+import AudienceSplit from "@/components/home/AudienceSplit";
+import FeatureHighlights from "@/components/home/FeatureHighlights";
+import Testimonials from "@/components/home/Testimonials";
+import CTA from "@/components/home/CTA";
+import { useEffect } from "react";
 
 const Index = () => {
+  // Add structured data for SEO
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.innerHTML = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Open Pulse Survey",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "All",
+      "description": "A self-hosted employee feedback platform for HR professionals and management teams that keeps internal data secure.",
+      "offers": {
+        "@type": "Offer",
+        "price": "Custom pricing",
+        "priceCurrency": "USD"
+      }
+    });
+    document.head.appendChild(script);
+    
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <Layout>
+      <Hero />
+      <Benefits />
+      <AudienceSplit />
+      <FeatureHighlights />
+      <Testimonials />
+      <CTA />
+    </Layout>
   );
 };
 
