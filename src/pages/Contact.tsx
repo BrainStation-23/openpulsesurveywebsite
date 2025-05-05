@@ -1,25 +1,49 @@
 
-import { useState } from 'react';
+import { useEffect } from 'react';
 import Layout from "@/components/layout/Layout";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/components/ui/use-toast";
 import { Mail, Phone, MessageSquare, Calendar } from "lucide-react";
 
-const Contact = () => {
-  const { toast } = useToast();
-  const [formSubmitted, setFormSubmitted] = useState(false);
+declare global {
+  interface Window {
+    hbspt: {
+      forms: {
+        create: (config: {
+          portalId: string;
+          formId: string;
+          region: string;
+          target?: string;
+        }) => void;
+      };
+    };
+  }
+}
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Demo request submitted",
-      description: "Our team will contact you shortly to schedule your demo.",
-    });
-    setFormSubmitted(true);
-  };
+const Contact = () => {
+  useEffect(() => {
+    // Load HubSpot script
+    const script = document.createElement('script');
+    script.src = "//js.hsforms.net/forms/embed/v2.js";
+    script.charset = "utf-8";
+    script.type = "text/javascript";
+    script.async = true;
+    document.body.appendChild(script);
+
+    script.onload = () => {
+      if (window.hbspt) {
+        window.hbspt.forms.create({
+          portalId: "1864636",
+          formId: "53de4a36-0af9-486a-8e66-9b6ca262357f",
+          region: "na1",
+          target: "#hubspot-form-container"
+        });
+      }
+    };
+
+    return () => {
+      // Clean up script on unmount
+      document.body.removeChild(script);
+    };
+  }, []);
 
   // Add structured data for SEO
   const contactStructuredData = {
@@ -131,136 +155,22 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Contact form */}
+            {/* HubSpot form */}
             <div>
               <div className="rounded-2xl bg-white p-8 shadow-sm border border-gray-100">
                 <h2 className="text-2xl font-bold tracking-tight text-gray-900">
                   Request a demo
                 </h2>
-                <p className="mt-2 text-gray-600">
+                <p className="mt-2 text-gray-600 mb-6">
                   Fill out the form below and we'll get back to you within one business day
                 </p>
                 
-                {formSubmitted ? (
-                  <div className="mt-8 p-6 bg-green-50 rounded-lg border border-green-100 text-center">
-                    <h3 className="text-xl font-semibold text-green-800 mb-2">Thank you!</h3>
-                    <p className="text-green-700">
-                      Your demo request has been submitted successfully. One of our team members will contact you shortly to schedule your personalized demo.
-                    </p>
-                  </div>
-                ) : (
-                  <form onSubmit={handleSubmit} className="mt-8 space-y-6">
-                    <div className="grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2">
-                      <div>
-                        <label htmlFor="first-name" className="block text-sm font-medium text-gray-700 mb-1">
-                          First name
-                        </label>
-                        <Input
-                          type="text"
-                          name="first-name"
-                          id="first-name"
-                          required
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="last-name" className="block text-sm font-medium text-gray-700 mb-1">
-                          Last name
-                        </label>
-                        <Input
-                          type="text"
-                          name="last-name"
-                          id="last-name"
-                          required
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                          Email
-                        </label>
-                        <Input
-                          type="email"
-                          name="email"
-                          id="email"
-                          required
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                          Phone
-                        </label>
-                        <Input
-                          type="tel"
-                          name="phone"
-                          id="phone"
-                          required
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
-                          Company
-                        </label>
-                        <Input
-                          type="text"
-                          name="company"
-                          id="company"
-                          required
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="role" className="block text-sm font-medium text-gray-700 mb-1">
-                          Your role
-                        </label>
-                        <Select name="role">
-                          <SelectTrigger className="w-full">
-                            <SelectValue placeholder="Select role" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="hr">HR Professional</SelectItem>
-                            <SelectItem value="executive">Executive/Management</SelectItem>
-                            <SelectItem value="it">IT Department</SelectItem>
-                            <SelectItem value="other">Other</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
-                      <div className="sm:col-span-2">
-                        <label htmlFor="company-size" className="block text-sm font-medium text-gray-700 mb-1">
-                          Company size
-                        </label>
-                        <Select name="company-size">
-                          <SelectTrigger className="w-full">
-                            <SelectValue placeholder="Select company size" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="1-50">1-50 employees</SelectItem>
-                            <SelectItem value="51-200">51-200 employees</SelectItem>
-                            <SelectItem value="201-500">201-500 employees</SelectItem>
-                            <SelectItem value="501-1000">501-1000 employees</SelectItem>
-                            <SelectItem value="1000+">1000+ employees</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
-                      <div className="sm:col-span-2">
-                        <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                          Message
-                        </label>
-                        <Textarea
-                          name="message"
-                          id="message"
-                          rows={4}
-                          placeholder="Tell us about your specific needs and questions"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <Button type="submit" className="w-full bg-blue-500 hover:bg-blue-600">
-                        Request Demo
-                      </Button>
-                    </div>
-                    <p className="text-xs text-gray-500 mt-4">
-                      By submitting this form, you agree to our <a href="#" className="text-blue-500 hover:underline">privacy policy</a>. We'll never share your information with third parties.
-                    </p>
-                  </form>
-                )}
+                {/* HubSpot Form Container */}
+                <div id="hubspot-form-container"></div>
+                
+                <p className="text-xs text-gray-500 mt-4">
+                  By submitting this form, you agree to our <a href="#" className="text-blue-500 hover:underline">privacy policy</a>. We'll never share your information with third parties.
+                </p>
               </div>
             </div>
           </div>
