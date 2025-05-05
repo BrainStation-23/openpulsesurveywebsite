@@ -47,7 +47,7 @@ const OpenSourceStack = () => {
         <Card className="overflow-hidden border-green-100">
           <div className="bg-green-50 p-6 flex items-center gap-4 border-b border-green-100">
             <div className="bg-white p-3 rounded-lg shadow-sm">
-              <i className="devicon-postgresql-plain colored text-4xl"></i>
+              <i className="devicon-supabase-plain colored text-4xl"></i>
             </div>
             <div>
               <h3 className="text-xl font-semibold text-green-900">Backend: Supabase</h3>
