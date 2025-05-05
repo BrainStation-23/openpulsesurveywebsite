@@ -1,10 +1,14 @@
-
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { useState } from "react";
+import { Users, Briefcase } from "lucide-react";
 
 const UseCases = () => {
+  const [selectedRole, setSelectedRole] = useState("hr");
+
   return (
     <Layout
       title="Use Cases | Open Pulse Survey"
@@ -27,14 +31,38 @@ const UseCases = () => {
       {/* Main Content */}
       <section className="section bg-white">
         <div className="container-tight">
-          <Tabs defaultValue="hr" className="w-full">
-            <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-12">
-              <TabsTrigger value="hr" className="text-base py-3">HR Professionals</TabsTrigger>
-              <TabsTrigger value="management" className="text-base py-3">Management Teams</TabsTrigger>
-            </TabsList>
+          <div className="mx-auto max-w-3xl mb-12 text-center">
+            <h2 className="text-2xl font-bold mb-6">Who are you?</h2>
+            <RadioGroup 
+              value={selectedRole} 
+              onValueChange={setSelectedRole}
+              className="inline-flex gap-8 justify-center"
+            >
+              <div className={`flex flex-col items-center p-6 rounded-xl transition-all ${selectedRole === 'hr' ? 'bg-blue-50 shadow-md' : 'bg-white hover:bg-gray-50'}`}>
+                <div className={`rounded-full p-3 mb-3 ${selectedRole === 'hr' ? 'bg-blue-100' : 'bg-gray-100'}`}>
+                  <Users className={`h-8 w-8 ${selectedRole === 'hr' ? 'text-blue-600' : 'text-gray-500'}`} />
+                </div>
+                <div className="flex items-center gap-3">
+                  <RadioGroupItem value="hr" id="hr" className="mt-0" />
+                  <label htmlFor="hr" className={`font-medium text-lg ${selectedRole === 'hr' ? 'text-blue-700' : 'text-gray-700'}`}>HR Professional</label>
+                </div>
+              </div>
+              
+              <div className={`flex flex-col items-center p-6 rounded-xl transition-all ${selectedRole === 'management' ? 'bg-blue-50 shadow-md' : 'bg-white hover:bg-gray-50'}`}>
+                <div className={`rounded-full p-3 mb-3 ${selectedRole === 'management' ? 'bg-blue-100' : 'bg-gray-100'}`}>
+                  <Briefcase className={`h-8 w-8 ${selectedRole === 'management' ? 'text-blue-600' : 'text-gray-500'}`} />
+                </div>
+                <div className="flex items-center gap-3">
+                  <RadioGroupItem value="management" id="management" className="mt-0" />
+                  <label htmlFor="management" className={`font-medium text-lg ${selectedRole === 'management' ? 'text-blue-700' : 'text-gray-700'}`}>Management Team</label>
+                </div>
+              </div>
+            </RadioGroup>
+          </div>
             
-            <TabsContent value="hr" className="mt-6">
-              <div className="mx-auto max-w-3xl">
+          <div className="mt-12">
+            {selectedRole === "hr" && (
+              <div className="mx-auto max-w-3xl animate-fade-in">
                 <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-8">
                   Employee Engagement & Retention Solutions
                 </h2>
@@ -134,10 +162,10 @@ const UseCases = () => {
                   </div>
                 </div>
               </div>
-            </TabsContent>
+            )}
             
-            <TabsContent value="management" className="mt-6">
-              <div className="mx-auto max-w-3xl">
+            {selectedRole === "management" && (
+              <div className="mx-auto max-w-3xl animate-fade-in">
                 <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-8">
                   Strategic Decision Support & Team Optimization
                 </h2>
@@ -237,8 +265,8 @@ const UseCases = () => {
                   </div>
                 </div>
               </div>
-            </TabsContent>
-          </Tabs>
+            )}
+          </div>
 
           <div className="mt-12 mx-auto max-w-3xl">
             <div className="bg-blue-50 p-8 rounded-xl border border-blue-100">
