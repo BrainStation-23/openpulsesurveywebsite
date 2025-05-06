@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -8,6 +7,7 @@ import ScrollToTopButton from "./components/common/ScrollToTopButton";
 import LazyRoute from "./components/routing/LazyRoute";
 import React, { useEffect } from "react";
 import { initFacebookPixel } from "@/lib/facebook-pixel";
+import { initHotjar } from "@/lib/hotjar";
 
 // Lazy load all pages
 const Index = React.lazy(() => import("./pages/Index"));
@@ -33,9 +33,10 @@ const queryClient = new QueryClient({
 });
 
 const App = () => {
-  // Initialize Facebook Pixel
+  // Initialize tracking tools
   useEffect(() => {
     initFacebookPixel();
+    initHotjar();
   }, []);
 
   return (
