@@ -30,7 +30,7 @@ type FacebookPixelFunction = {
 } & Function;
 
 // Pixel ID - Replace with your actual Pixel ID when implementing
-const FACEBOOK_PIXEL_ID = 'FACEBOOK_PIXEL_ID_HERE';
+const FACEBOOK_PIXEL_ID = '2205817709933457';
 
 /**
  * Initialize Facebook Pixel
