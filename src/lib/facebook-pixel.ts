@@ -1,24 +1,33 @@
 
 // Type definitions for Facebook Pixel
-interface FacebookPixelEvent {
-  [key: string]: string | number | boolean | object;
-}
-
-interface FacebookPixel {
-  push: (args: any[]) => void;
-  init: (pixelId: string, extraParams?: object) => void;
-  track: (event: string, data?: FacebookPixelEvent) => void;
-  trackCustom: (event: string, data?: FacebookPixelEvent) => void;
-  trackSingle: (pixelId: string, event: string, data?: FacebookPixelEvent) => void;
-  trackSingleCustom: (pixelId: string, event: string, data?: FacebookPixelEvent) => void;
-}
-
-// Declare fbq as a global variable
+// The correct way to type fbq is as a function with properties
 declare global {
   interface Window {
-    fbq?: FacebookPixel;
+    fbq?: FacebookPixelFunction;
+    _fbq?: any;
   }
 }
+
+// Define fbq as a function with properties rather than just an interface
+type FacebookPixelFunction = {
+  (
+    action: string,
+    eventName: string,
+    params?: Record<string, any>
+  ): void;
+  (
+    action: string,
+    pixelId: string,
+    eventName?: string,
+    params?: Record<string, any>
+  ): void;
+  callMethod?: (...args: any[]) => void;
+  queue?: any[];
+  push?: (...args: any[]) => void;
+  loaded?: boolean;
+  version?: string;
+  // Include additional properties as needed
+} & Function;
 
 // Pixel ID - Replace with your actual Pixel ID when implementing
 const FACEBOOK_PIXEL_ID = 'FACEBOOK_PIXEL_ID_HERE';
@@ -46,7 +55,7 @@ export const trackPageView = (): void => {
  * @param event - Standard event name
  * @param data - Event parameters
  */
-export const trackEvent = (event: string, data?: FacebookPixelEvent): void => {
+export const trackEvent = (event: string, data?: Record<string, any>): void => {
   if (typeof window !== 'undefined' && window.fbq) {
     window.fbq('track', event, data);
   }
@@ -57,26 +66,26 @@ export const trackEvent = (event: string, data?: FacebookPixelEvent): void => {
  * @param event - Custom event name
  * @param data - Event parameters
  */
-export const trackCustomEvent = (event: string, data?: FacebookPixelEvent): void => {
+export const trackCustomEvent = (event: string, data?: Record<string, any>): void => {
   if (typeof window !== 'undefined' && window.fbq) {
     window.fbq('trackCustom', event, data);
   }
 };
 
 // Convenience methods for common events
-export const trackContact = (data?: FacebookPixelEvent): void => {
+export const trackContact = (data?: Record<string, any>): void => {
   trackEvent('Contact', data);
 };
 
-export const trackCompleteRegistration = (data?: FacebookPixelEvent): void => {
+export const trackCompleteRegistration = (data?: Record<string, any>): void => {
   trackEvent('CompleteRegistration', data);
 };
 
-export const trackLeadSubmission = (data?: FacebookPixelEvent): void => {
+export const trackLeadSubmission = (data?: Record<string, any>): void => {
   trackEvent('Lead', data);
 };
 
-export const trackDemoRequest = (data?: FacebookPixelEvent): void => {
+export const trackDemoRequest = (data?: Record<string, any>): void => {
   trackCustomEvent('DemoRequest', data);
 };
 

@@ -1,7 +1,7 @@
 
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
-import { trackCustomEvent, trackLeadSubmission } from '@/lib/facebook-pixel';
+import { trackCustomEvent } from '@/lib/facebook-pixel';
 
 const CTA = () => {
   const handleDemoClick = () => {
