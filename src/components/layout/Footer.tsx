@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 import Logo from './Logo';
 import { Youtube } from 'lucide-react';
@@ -72,6 +73,9 @@ const Footer = () => {
               </li>
               <li>
                 <a href="https://docs.openpulsesurvey.com/" className="text-base text-gray-600 hover:text-blue-500">Documentation</a>
+              </li>
+              <li>
+                <Link to="/sitemap" className="text-base text-gray-600 hover:text-blue-500">Sitemap</Link>
               </li>
             </ul>
           </div>
