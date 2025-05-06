@@ -70,7 +70,14 @@ const Sitemap = () => {
                 A machine-readable XML sitemap is also available for search engines at:
               </p>
               <div className="bg-gray-100 p-3 rounded-lg overflow-x-auto">
-                <code className="text-blue-600">https://openpulsesurvey.com/sitemap.xml</code>
+                <a 
+                  href="/sitemap.xml"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:underline"
+                >
+                  https://openpulsesurvey.com/sitemap.xml
+                </a>
               </div>
             </div>
           </div>
