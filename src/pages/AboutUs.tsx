@@ -5,7 +5,7 @@ import { Book } from "lucide-react";
 import Markdown from "markdown-to-jsx";
 
 const aboutUsMarkdown = `
-## 🚀 Our Story: Born From a Real Need, Built With Purpose
+##  Our Story: Born From a Real Need, Built With Purpose
 
 I'm **Tanimul Haque Khan**, and I lead the **Innovation Department at Brain Station 23**. This journey started with a simple, thought-provoking conversation with our CTO, **Mizanur Rahman**.
 
@@ -14,7 +14,7 @@ He shared a concern that many leaders today quietly carry:
 
 This struck a chord. We both knew that as organizations grow, these platforms become not only **increasingly expensive**, but also **compliance nightmares** – storing sensitive HR data in shared environments without true transparency.
 
-### 🧩 The HR Perspective
+###  The HR Perspective
 
 I took this concern to our **Senior HR Manager, Abdul Motaleb Sohel**, and asked:  
 > "What's missing from your current pulse survey tools?"
@@ -22,27 +22,27 @@ I took this concern to our **Senior HR Manager, Abdul Motaleb Sohel**, and asked
 He opened up about the everyday pain of using tools that weren't built for **real HR needs** – tools that lacked empathy, customization, and practical features that matter most during execution.
 
 We realized something profound:  
-🛠️ **HR needs a product designed *with* them, not *for* them.**
+ **HR needs a product designed *with* them, not *for* them.**
 
 ---
 
-## 🌱 The Birth of *Open Pulse Survey*
+##  The Birth of *Open Pulse Survey*
 
 Out of this collaboration came **Open Pulse Survey** –  
 a tool shaped by those who **needed it most**, not by what the market was selling.
 
 ### Why We Built It:
-- ✅ **Self-hosted or isolated per-client**, giving full control over data.
-- 💸 **No invasive per-user/month pricing.** Growth shouldn't feel like a penalty.
-- ❤️ **Co-designed with HR**, ensuring it solves real, everyday problems.
-- 🔄 **Transparent, flexible, and built with compliance in mind.**
+-  **Self-hosted or isolated per-client**, giving full control over data.
+-  **No invasive per-user/month pricing.** Growth shouldn't feel like a penalty.
+-  **Co-designed with HR**, ensuring it solves real, everyday problems.
+-  **Transparent, flexible, and built with compliance in mind.**
 
 > _This isn't just another survey platform._  
 > It's a rebellion against the exploitative pricing and black-box policies of typical SaaS solutions.
 
 ---
 
-## ✊ Built for People, Not Just Profit
+##  Built for People, Not Just Profit
 
 At its core, Open Pulse Survey is about **empowering organizations** to take back ownership of their data, processes, and employee experience.
 
