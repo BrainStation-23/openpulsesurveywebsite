@@ -1,10 +1,9 @@
+
 import React, { Suspense, ComponentType } from 'react';
 
-// Simple loading component
-const PageLoader = () => (
-  <div className="flex items-center justify-center min-h-[50vh]">
-    <div className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
-  </div>
+// Minimal fallback for extremely slow connections - invisible on fast connections
+const MinimalFallback = () => (
+  <div className="min-h-[50vh]"></div>
 );
 
 type LazyRouteProps = {
@@ -15,7 +14,7 @@ type LazyRouteProps = {
 // Component that handles lazy loading with Suspense
 const LazyRoute: React.FC<LazyRouteProps> = ({ 
   component: Component,
-  fallback = <PageLoader />
+  fallback = <MinimalFallback />
 }) => {
   return (
     <Suspense fallback={fallback}>
