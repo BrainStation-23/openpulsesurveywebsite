@@ -1,4 +1,3 @@
-
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -20,27 +19,6 @@ app.use(helmet({
 // Enable gzip/brotli compression
 app.use(compression());
 
-// Special handling for sitemap.xml - Must come BEFORE other static handlers
-app.get('/sitemap.xml', (req, res) => {
-  const sitemapPath = path.join(__dirname, 'dist', 'sitemap.xml');
-  
-  // Set the correct content type for XML
-  res.setHeader('Content-Type', 'application/xml');
-  
-  // Check if the file exists
-  if (fs.existsSync(sitemapPath)) {
-    res.sendFile(sitemapPath);
-  } else {
-    // If sitemap file doesn't exist in dist, use the one from public
-    const publicSitemapPath = path.join(__dirname, 'public', 'sitemap.xml');
-    if (fs.existsSync(publicSitemapPath)) {
-      res.sendFile(publicSitemapPath);
-    } else {
-      res.status(404).send('Sitemap not found');
-    }
-  }
-});
-
 // Cache control for static assets - helps with "Serve static assets with an efficient cache policy"
 app.use(express.static(path.join(__dirname, 'dist'), {
   maxAge: '1y',
@@ -55,12 +33,12 @@ app.use(express.static(path.join(__dirname, 'dist'), {
   }
 }));
 
-// For the root route, serve the index.html file
+// For all other routes, serve the index.html file (for SPA)
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
-// Handle all other routes for SPA (except those already handled)
+// Handle all other routes for SPA
 app.use((req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
