@@ -6,7 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/common/ScrollToTop";
 import ScrollToTopButton from "./components/common/ScrollToTopButton";
 import LazyRoute from "./components/routing/LazyRoute";
-import React from "react";
+import React, { useEffect } from "react";
+import { initFacebookPixel } from "@/lib/facebook-pixel";
 
 // Lazy load all pages
 const Index = React.lazy(() => import("./pages/Index"));
@@ -31,30 +32,37 @@ const queryClient = new QueryClient({
   },
 });
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <BrowserRouter>
-      <TooltipProvider>
-        <ScrollToTop />
-        <Toaster />
-        <Routes>
-          <Route path="/" element={<LazyRoute component={Index} />} />
-          <Route path="/features" element={<LazyRoute component={Features} />} />
-          <Route path="/anti-saas" element={<LazyRoute component={AntiSaas} />} />
-          <Route path="/use-cases" element={<LazyRoute component={UseCases} />} />
-          <Route path="/technical" element={<LazyRoute component={Technical} />} />
-          <Route path="/contact" element={<LazyRoute component={Contact} />} />
-          <Route path="/pricing" element={<LazyRoute component={Pricing} />} />
-          <Route path="/thank-you" element={<LazyRoute component={ThankYou} />} />
-          <Route path="/about-us" element={<LazyRoute component={AboutUs} />} />
-          <Route path="/privacy-policy" element={<LazyRoute component={PrivacyPolicy} />} />
-          <Route path="/sitemap" element={<LazyRoute component={Sitemap} />} />
-          <Route path="*" element={<LazyRoute component={NotFound} />} />
-        </Routes>
-        <ScrollToTopButton />
-      </TooltipProvider>
-    </BrowserRouter>
-  </QueryClientProvider>
-);
+const App = () => {
+  // Initialize Facebook Pixel
+  useEffect(() => {
+    initFacebookPixel();
+  }, []);
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
+        <TooltipProvider>
+          <ScrollToTop />
+          <Toaster />
+          <Routes>
+            <Route path="/" element={<LazyRoute component={Index} />} />
+            <Route path="/features" element={<LazyRoute component={Features} />} />
+            <Route path="/anti-saas" element={<LazyRoute component={AntiSaas} />} />
+            <Route path="/use-cases" element={<LazyRoute component={UseCases} />} />
+            <Route path="/technical" element={<LazyRoute component={Technical} />} />
+            <Route path="/contact" element={<LazyRoute component={Contact} />} />
+            <Route path="/pricing" element={<LazyRoute component={Pricing} />} />
+            <Route path="/thank-you" element={<LazyRoute component={ThankYou} />} />
+            <Route path="/about-us" element={<LazyRoute component={AboutUs} />} />
+            <Route path="/privacy-policy" element={<LazyRoute component={PrivacyPolicy} />} />
+            <Route path="/sitemap" element={<LazyRoute component={Sitemap} />} />
+            <Route path="*" element={<LazyRoute component={NotFound} />} />
+          </Routes>
+          <ScrollToTopButton />
+        </TooltipProvider>
+      </BrowserRouter>
+    </QueryClientProvider>
+  );
+};
 
 export default App;

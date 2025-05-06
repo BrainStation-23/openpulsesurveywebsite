@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,6 +7,21 @@
     <title>Open Pulse Survey</title>
     <meta name="description" content="Enterprise Pulse Survey Platform" />
     <meta name="author" content="Tanimul Haque Khan" />
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '2205817709933457');
+      fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
 
     <!-- SEO and social sharing -->
     <meta property="og:title" content="open-pulse-survey" />
@@ -29,11 +45,11 @@
     <link rel="preload" href="/src/index.css" as="style">
     <link rel="stylesheet" href="/src/index.css">
     
-    <!-- Add preload for critical JavaScript -->
-    <link rel="modulepreload" href="/src/main.tsx">
-    <link rel="modulepreload" href="/src/App.tsx">
+    <!-- Add preload for critical JavaScript with correct MIME type -->
+    <link rel="modulepreload" href="/src/main.tsx" type="application/javascript">
+    <link rel="modulepreload" href="/src/App.tsx" type="application/javascript">
     
-    <!-- Preload LCP image -->
+    <!-- Preload LCP image with correct path and fetch priority -->
     <link rel="preload" as="image" href="/assets/hero-image.webp" fetchpriority="high">
     
     <!-- Disable non-essential third-party scripts during initial load -->
@@ -47,9 +63,14 @@
   </head>
 
   <body>
+    <!-- Facebook Pixel noscript (moved from head to body) -->
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2205817709933457&ev=PageView&noscript=1"
+    /></noscript>
+    
     <div id="root"></div>
     <!-- Load third-party scripts with appropriate attributes -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module" defer></script>
+    <script src="https://cdn.gpteng.co/gptengineer.js" defer></script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
