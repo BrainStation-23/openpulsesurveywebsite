@@ -1,3 +1,4 @@
+
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -19,6 +20,13 @@ app.use(helmet({
 // Enable gzip/brotli compression
 app.use(compression());
 
+// Special handling for sitemap.xml - Must come BEFORE other static handlers
+app.get('/sitemap.xml', (req, res) => {
+  const sitemapPath = path.join(__dirname, 'dist', 'sitemap.xml');
+  res.setHeader('Content-Type', 'application/xml');
+  res.sendFile(sitemapPath);
+});
+
 // Cache control for static assets - helps with "Serve static assets with an efficient cache policy"
 app.use(express.static(path.join(__dirname, 'dist'), {
   maxAge: '1y',
@@ -33,12 +41,12 @@ app.use(express.static(path.join(__dirname, 'dist'), {
   }
 }));
 
-// For all other routes, serve the index.html file (for SPA)
+// For the root route, serve the index.html file
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
-// Handle all other routes for SPA
+// Handle all other routes for SPA (except those already handled)
 app.use((req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });

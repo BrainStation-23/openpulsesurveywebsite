@@ -5,19 +5,22 @@
   publish = "dist"
   command = "npm run build"
 
-# Handle SPA routing - redirect all paths to index.html
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  
+# The order of redirects is important - most specific first
+
 # Exception for sitemap.xml to serve it directly
+# This must come BEFORE the SPA redirect rule
 [[redirects]]
   from = "/sitemap.xml"
   to = "/sitemap.xml"
   status = 200
   force = true
 
+# Handle SPA routing - redirect all paths to index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  
 # Cache control for static assets
 [[headers]]
   for = "/assets/*"
@@ -48,3 +51,10 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Special handling for sitemap.xml
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml"
+    X-Content-Type-Options = "nosniff"
