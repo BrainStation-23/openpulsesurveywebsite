@@ -5,18 +5,17 @@
   publish = "dist"
   command = "npm run build"
 
-# Handle SPA routing - redirect all paths to index.html
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  
-# Exception for sitemap.xml to serve it directly
 [[redirects]]
   from = "/sitemap.xml"
   to = "/sitemap.xml"
   status = 200
   force = true
+
+# Handle SPA routing - redirect all paths to index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
 # Cache control for static assets
 [[headers]]
