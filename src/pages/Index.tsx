@@ -8,7 +8,6 @@ import Testimonials from "@/components/home/Testimonials";
 import VideoTrailer from "@/components/home/VideoTrailer";
 import CTA from "@/components/home/CTA";
 import { useEffect } from "react";
-import { Helmet } from "react-helmet";
 
 // Pre-define structured data to avoid runtime calculations
 const structuredData = {
@@ -39,21 +38,15 @@ const Index = () => {
   }, []);
 
   return (
-    <>
-      <Helmet>
-        <link rel="canonical" href="https://openpulsesurvey.com/" />
-        <meta name="robots" content="index, follow" />
-      </Helmet>
-      <Layout>
-        <Hero />
-        <Benefits />
-        <AudienceSplit />
-        <FeatureHighlights />
-        <VideoTrailer />
-        <Testimonials />
-        <CTA />
-      </Layout>
-    </>
+    <Layout>
+      <Hero />
+      <Benefits />
+      <AudienceSplit />
+      <FeatureHighlights />
+      <VideoTrailer />
+      <Testimonials />
+      <CTA />
+    </Layout>
   );
 };
 

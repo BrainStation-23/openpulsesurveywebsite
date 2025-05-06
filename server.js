@@ -27,25 +27,6 @@ app.get('/sitemap.xml', (req, res) => {
   res.sendFile(sitemapPath);
 });
 
-// Check for prerendered pages first
-app.use((req, res, next) => {
-  const normalizedUrl = req.path === '/' ? '/index.html' : req.path;
-  const prerenderedPath = path.join(__dirname, 'dist', normalizedUrl);
-  
-  // If this is a direct path to a prerendered HTML file, serve it
-  if (normalizedUrl.endsWith('/') || normalizedUrl === '/index.html') {
-    const htmlPath = normalizedUrl.endsWith('/') 
-      ? path.join(__dirname, 'dist', normalizedUrl, 'index.html')
-      : prerenderedPath;
-    
-    if (fs.existsSync(htmlPath)) {
-      return res.sendFile(htmlPath);
-    }
-  }
-  
-  next();
-});
-
 // Cache control for static assets - helps with "Serve static assets with an efficient cache policy"
 app.use(express.static(path.join(__dirname, 'dist'), {
   maxAge: '1y',
@@ -89,6 +70,3 @@ if (fs.existsSync('./cert/key.pem') && fs.existsSync('./cert/cert.pem')) {
     console.log('For HTTP/2 support, add SSL certificates in the ./cert folder');
   });
 }
-
-// Export the app for the prerender script
-export default app;
