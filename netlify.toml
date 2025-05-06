@@ -15,6 +15,12 @@
   status = 200
   force = true
 
+# Redirect for prerendered HTML files
+[[redirects]]
+  from = "/*/"
+  to = "/:splat/index.html"
+  status = 200
+
 # Handle SPA routing - redirect all paths to index.html
 [[redirects]]
   from = "/*"
