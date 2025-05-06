@@ -23,8 +23,22 @@ app.use(compression());
 // Special handling for sitemap.xml - Must come BEFORE other static handlers
 app.get('/sitemap.xml', (req, res) => {
   const sitemapPath = path.join(__dirname, 'dist', 'sitemap.xml');
+  
+  // Set the correct content type for XML
   res.setHeader('Content-Type', 'application/xml');
-  res.sendFile(sitemapPath);
+  
+  // Check if the file exists
+  if (fs.existsSync(sitemapPath)) {
+    res.sendFile(sitemapPath);
+  } else {
+    // If sitemap file doesn't exist in dist, use the one from public
+    const publicSitemapPath = path.join(__dirname, 'public', 'sitemap.xml');
+    if (fs.existsSync(publicSitemapPath)) {
+      res.sendFile(publicSitemapPath);
+    } else {
+      res.status(404).send('Sitemap not found');
+    }
+  }
 });
 
 // Cache control for static assets - helps with "Serve static assets with an efficient cache policy"

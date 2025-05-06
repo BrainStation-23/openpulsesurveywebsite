@@ -5,16 +5,14 @@
   publish = "dist"
   command = "npm run build"
 
-# The order of redirects is important - most specific first
-
-# Exception for sitemap.xml to serve it directly
-# This must come BEFORE the SPA redirect rule
+# Special handling for sitemap.xml - must come BEFORE the SPA redirect
+# This redirect ensures sitemap.xml is served with the correct content type
 [[redirects]]
   from = "/sitemap.xml"
   to = "/sitemap.xml"
   status = 200
   force = true
-
+  
 # Handle SPA routing - redirect all paths to index.html
 [[redirects]]
   from = "/*"
