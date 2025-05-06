@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -18,6 +19,7 @@ const Contact = React.lazy(() => import("./pages/Contact"));
 const Pricing = React.lazy(() => import("./pages/Pricing"));
 const ThankYou = React.lazy(() => import("./pages/ThankYou"));
 const AboutUs = React.lazy(() => import("./pages/AboutUs"));
+const PrivacyPolicy = React.lazy(() => import("./pages/PrivacyPolicy"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -44,6 +46,7 @@ const App = () => (
           <Route path="/pricing" element={<LazyRoute component={Pricing} />} />
           <Route path="/thank-you" element={<LazyRoute component={ThankYou} />} />
           <Route path="/about-us" element={<LazyRoute component={AboutUs} />} />
+          <Route path="/privacy-policy" element={<LazyRoute component={PrivacyPolicy} />} />
           <Route path="*" element={<LazyRoute component={NotFound} />} />
         </Routes>
         <ScrollToTopButton />
