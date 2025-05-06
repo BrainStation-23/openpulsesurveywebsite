@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -29,11 +30,11 @@
     <link rel="preload" href="/src/index.css" as="style">
     <link rel="stylesheet" href="/src/index.css">
     
-    <!-- Add preload for critical JavaScript -->
-    <link rel="modulepreload" href="/src/main.tsx">
-    <link rel="modulepreload" href="/src/App.tsx">
+    <!-- Add preload for critical JavaScript with correct MIME type -->
+    <link rel="modulepreload" href="/src/main.tsx" type="application/javascript">
+    <link rel="modulepreload" href="/src/App.tsx" type="application/javascript">
     
-    <!-- Preload LCP image -->
+    <!-- Preload LCP image with correct path and fetch priority -->
     <link rel="preload" as="image" href="/assets/hero-image.webp" fetchpriority="high">
     
     <!-- Disable non-essential third-party scripts during initial load -->
@@ -49,7 +50,7 @@
   <body>
     <div id="root"></div>
     <!-- Load third-party scripts with appropriate attributes -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module" defer></script>
+    <script src="https://cdn.gpteng.co/gptengineer.js" defer></script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
