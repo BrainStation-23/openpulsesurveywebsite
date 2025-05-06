@@ -71,6 +71,22 @@ const PrivacyPolicy = () => {
             <li>Optional update notifications</li>
           </ul>
 
+          <h2>Analytics and Tracking</h2>
+          <p>
+            Our website uses Facebook Pixel to help us understand how visitors interact with our site and to optimize our marketing efforts. Facebook Pixel may collect information such as:
+          </p>
+          <ul>
+            <li>Pages you visit on our website</li>
+            <li>Actions you take, such as clicking buttons or filling forms</li>
+            <li>Basic device information and browser type</li>
+          </ul>
+          <p>
+            We use this information to measure the effectiveness of our ad campaigns and to provide you with more relevant content. Facebook may use cookies to collect this data. Please note that this tracking is limited to our marketing website only - it is not part of the self-hosted Open Pulse Survey platform that you deploy.
+          </p>
+          <p>
+            You can opt-out of Facebook tracking by adjusting your browser settings to reject cookies or by using browser extensions designed to block tracking scripts.
+          </p>
+
           <h2>Security Responsibility Disclaimer</h2>
           <p>
             While we provide a secure platform design and best practices guidance, Open Pulse Survey is not liable for security vulnerabilities resulting from:
