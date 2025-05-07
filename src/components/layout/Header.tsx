@@ -35,7 +35,7 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200">
       <nav className="container-tight flex items-center justify-between py-4">
         <div className="flex items-center">
-          <Logo />
+          <Logo useWordmark={true} />
         </div>
 
         {/* Desktop navigation */}
@@ -69,7 +69,7 @@ const Header = () => {
             <SheetContent side="right" className="w-full sm:max-w-sm p-0">
               <div className="flex flex-col h-full">
                 <div className="p-6">
-                  <Logo />
+                  <Logo useWordmark={true} />
                 </div>
                 <div className="flex-1 overflow-y-auto px-6 pb-6">
                   <div className="space-y-2">

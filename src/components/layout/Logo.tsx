@@ -5,9 +5,10 @@ import { Link } from 'react-router-dom';
 interface LogoProps {
   className?: string;
   showText?: boolean;
+  useWordmark?: boolean;
 }
 
-const Logo: React.FC<LogoProps> = ({ className = "", showText = true }) => {
+const Logo: React.FC<LogoProps> = ({ className = "", showText = true, useWordmark = false }) => {
   return (
     <Link to="/" className={`flex items-center gap-2 ${className}`}>
       <div className="h-10 w-10 relative">
@@ -55,7 +56,14 @@ const Logo: React.FC<LogoProps> = ({ className = "", showText = true }) => {
                 stroke="#a855f7" strokeWidth="4" fill="none" strokeLinecap="round"/>
         </svg>
       </div>
-      {showText && <span className="text-2xl font-bold text-blue-500">Open Pulse Survey</span>}
+      {showText && !useWordmark && <span className="text-2xl font-bold text-blue-500">Open Pulse Survey</span>}
+      {showText && useWordmark && (
+        <img 
+          src="/logo-wordmark.png" 
+          alt="Open Pulse Survey" 
+          className="h-10 object-contain" 
+        />
+      )}
     </Link>
   );
 };

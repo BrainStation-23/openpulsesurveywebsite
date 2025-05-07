@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container-tight py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
           <div className="col-span-1 md:col-span-3 lg:col-span-2">
-            <Logo />
+            <Logo useWordmark={true} />
             <p className="mt-4 text-base text-gray-600 max-w-md">
               Collect and act on employee feedback while keeping your internal data secure. Open Pulse Survey is your self-hosted employee feedback platform.
             </p>
