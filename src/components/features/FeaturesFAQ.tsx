@@ -33,7 +33,7 @@ const FeaturesFAQ = () => {
             How does the AI reporting work with self-hosted data?
           </h3>
           <p className="mt-2 text-base leading-7 text-gray-600">
-            Our AI engine runs entirely within your environment. No data is ever sent to external services for processing, ensuring complete privacy of your employee feedback.
+            It's fully under your control. You can choose to use your own self-hosted AI model or public API.
           </p>
         </div>
         <div>
