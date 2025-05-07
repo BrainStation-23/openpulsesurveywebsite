@@ -5,7 +5,7 @@ const VideoTrailer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
   const thumbnailRef = useRef<HTMLImageElement>(null);
-  const videoId = "Fd2kLIVAJVw";
+  const videoId = "1c18FJdLMic";
   
   // Use intersection observer to defer loading until component is in viewport
   useEffect(() => {
