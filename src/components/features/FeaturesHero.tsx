@@ -10,7 +10,7 @@ const FeaturesHero = () => {
             Powerful features for impactful feedback
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Open Pulse Survey combines enterprise-grade security with powerful feedback tools to help you gather, analyze, and act on employee insights—all while keeping your data within your control.
+            Open Pulse Survey combines enterprise-grade security with powerful feedback tools and flexible AI integrations to help you gather, analyze, and act on employee insights—all while keeping your data within your control.
           </p>
         </div>
       </div>

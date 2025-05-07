@@ -36,6 +36,14 @@ const FeaturesFAQ = () => {
             Our AI engine runs entirely within your environment. No data is ever sent to external services for processing, ensuring complete privacy of your employee feedback.
           </p>
         </div>
+        <div>
+          <h3 className="text-lg font-semibold leading-7 text-gray-900">
+            How do I set up AI integrations with external providers?
+          </h3>
+          <p className="mt-2 text-base leading-7 text-gray-600">
+            Open Pulse Survey includes a simple configuration panel where you can enter API keys for services like Gemini, Claude, or OpenAI. For self-hosted models, you can specify your custom endpoint URL and authentication details. All credentials are stored securely and only used within your environment.
+          </p>
+        </div>
       </div>
     </div>
   );
