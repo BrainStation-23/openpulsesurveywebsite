@@ -46,7 +46,7 @@ const AIIntegrationSection = () => {
           <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 flex flex-col items-center text-center transition-all hover:shadow-lg">
             <div className="w-16 h-16 flex items-center justify-center mb-4">
               <img 
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/openai/openai-original.svg" 
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/OpenAI_Logo.svg/512px-OpenAI_Logo.svg.png" 
                 alt="OpenAI"
                 className="h-12 w-auto"
               />
@@ -76,7 +76,7 @@ const AIIntegrationSection = () => {
           <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 flex flex-col items-center text-center transition-all hover:shadow-lg">
             <div className="w-16 h-16 flex items-center justify-center mb-4">
               <img 
-                src="https://lmstudio.ai/icons/logo-light.svg" 
+                src="https://lmstudio.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flmstudio-app-logo.61cb7d80.webp&w=1920&q=75" 
                 alt="LM Studio"
                 className="h-12 w-auto"
               />
