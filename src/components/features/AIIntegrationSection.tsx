@@ -111,41 +111,6 @@ const AIIntegrationSection = () => {
         </div>
       </div>
 
-      {/* Configuration Panel Feature */}
-      <div className="mt-12 bg-white p-6 rounded-lg shadow-md border border-gray-100">
-        <div className="flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 mb-6 md:mb-0 md:pr-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">Simple Configuration</h3>
-            <p className="text-gray-600 mb-4">
-              Set up your AI integrations in minutes with our intuitive configuration panel. Securely store API keys and customize model parameters to fit your exact needs.
-            </p>
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center">
-                <WandSparkles className="h-5 w-5 text-purple-500 mr-2" />
-                <span className="text-sm text-gray-600">Fine-tune parameters</span>
-              </div>
-              <div className="flex items-center">
-                <Server className="h-5 w-5 text-purple-500 mr-2" />
-                <span className="text-sm text-gray-600">Custom endpoints</span>
-              </div>
-            </div>
-          </div>
-          <div className="md:w-1/2 bg-gray-50 p-4 rounded-md">
-            <pre className="text-xs text-gray-700 overflow-auto">
-              <code>{`{
-  "provider": "openai",
-  "apiKey": "sk-*************",
-  "model": "gpt-4o",
-  "parameters": {
-    "temperature": 0.7,
-    "maxTokens": 1000
-  }
-}`}</code>
-            </pre>
-          </div>
-        </div>
-      </div>
-    </div>
   );
 };
 
