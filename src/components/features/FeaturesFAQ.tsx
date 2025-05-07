@@ -30,18 +30,18 @@ const FeaturesFAQ = () => {
         </div>
         <div>
           <h3 className="text-lg font-semibold leading-7 text-gray-900">
-            How does the AI reporting work with self-hosted data?
+            How do I set up AI integrations with external providers?
           </h3>
           <p className="mt-2 text-base leading-7 text-gray-600">
-            It's fully under your control. You can choose to use your own self-hosted AI model or public API.
+            Open Pulse Survey includes a dedicated configuration panel where you can enter API keys for services like Gemini, Claude, or OpenAI. For self-hosted models like Ollama or LM Studio, you can specify your custom endpoint URL and authentication details. Enterprise users can configure connections to AWS Bedrock, Azure OpenAI, or Vercel AI. All credentials are stored securely and only used within your environment.
           </p>
         </div>
         <div>
           <h3 className="text-lg font-semibold leading-7 text-gray-900">
-            How do I set up AI integrations with external providers?
+            Are my survey data and AI interactions kept private?
           </h3>
           <p className="mt-2 text-base leading-7 text-gray-600">
-            Open Pulse Survey includes a simple configuration panel where you can enter API keys for services like Gemini, Claude, or OpenAI. For self-hosted models, you can specify your custom endpoint URL and authentication details. All credentials are stored securely and only used within your environment.
+            Absolutely. With Open Pulse Survey, your data never leaves your infrastructure unless you explicitly configure external AI services. When using self-hosted models or private cloud deployments, all data processing happens within your security perimeter, ensuring complete data sovereignty and compliance with privacy regulations.
           </p>
         </div>
       </div>

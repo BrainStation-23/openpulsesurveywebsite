@@ -1,6 +1,7 @@
 import React from "react";
 import FeatureCategory from "./FeatureCategory";
 import FeaturesFAQ from "./FeaturesFAQ";
+import AIIntegrationSection from "./AIIntegrationSection";
 import {
   BarChart,
   FileText,
@@ -12,10 +13,6 @@ import {
   Users,
   ChartPie,
   Settings,
-  BrainCircuit,
-  Server,
-  Cog,
-  WandSparkles,
 } from "lucide-react";
 
 const FeaturesGrid = () => {
@@ -97,32 +94,6 @@ const FeaturesGrid = () => {
           description: "Built to help you maintain compliance with relevant data protection regulations."
         }
       ]
-    },
-    {
-      title: "AI Integration",
-      description: "Connect to leading AI models or use your own for advanced survey analysis",
-      features: [
-        {
-          icon: BrainCircuit,
-          name: "Public API Integrations",
-          description: "Built-in support for leading AI services including Gemini, Claude, and OpenAI with simple API key configuration."
-        },
-        {
-          icon: Server,
-          name: "Self-Hosted Models",
-          description: "Connect to your own self-hosted AI models for complete data sovereignty while maintaining advanced analysis capabilities."
-        },
-        {
-          icon: Cog,
-          name: "Custom Endpoints",
-          description: "Configure custom API endpoints to work with any AI provider or internal model deployment of your choice."
-        },
-        {
-          icon: WandSparkles,
-          name: "Configurable Parameters",
-          description: "Fine-tune AI behavior with customizable parameters for temperature, context length, response format, and more."
-        }
-      ]
     }
   ];
 
@@ -138,6 +109,9 @@ const FeaturesGrid = () => {
               features={category.features}
             />
           ))}
+          
+          {/* Enhanced AI Integration Section */}
+          <AIIntegrationSection />
         </div>
 
         {/* FAQ Section */}
