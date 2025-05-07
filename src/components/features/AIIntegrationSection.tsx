@@ -46,7 +46,7 @@ const AIIntegrationSection = () => {
           <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 flex flex-col items-center text-center transition-all hover:shadow-lg">
             <div className="w-16 h-16 flex items-center justify-center mb-4">
               <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/OpenAI_Logo.svg/512px-OpenAI_Logo.svg.png" 
+                src="https://th.bing.com/th/id/OIP.vavoc8cDEEF29H7bX8kxjQHaHa" 
                 alt="OpenAI"
                 className="h-12 w-auto"
               />
