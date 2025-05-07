@@ -1,10 +1,13 @@
 
 import { Link } from 'react-router-dom';
 import { ShieldCheck } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const WhyOnceOffLicense = () => {
+  const isMobile = useIsMobile();
+  
   return (
-    <div className="mt-12 bg-blue-50 rounded-xl p-6 border border-blue-100">
+    <div className={`mt-12 bg-blue-50 rounded-xl p-6 border border-blue-100 ${isMobile ? "" : "max-w-5xl mx-auto"}`}>
       <div className="flex items-start gap-4">
         <div className="flex-shrink-0">
           <ShieldCheck className="h-8 w-8 text-blue-600" />
