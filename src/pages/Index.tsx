@@ -92,7 +92,7 @@ const Index = () => {
       <AudienceSplit />
       <FeatureHighlights />
       <VideoTrailer />
-      <Testimonials />
+      <!-- <Testimonials /> -->
       <CTA />
     </Layout>
   );
