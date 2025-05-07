@@ -25,7 +25,7 @@ const AIIntegrationSection = () => {
             <div className="w-16 h-16 flex items-center justify-center mb-4">
               <img 
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" 
-                alt="Google Gemini" 
+                alt="Google Gemini Logo" 
                 className="h-12 w-auto"
               />
             </div>
@@ -35,9 +35,11 @@ const AIIntegrationSection = () => {
 
           <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 flex flex-col items-center text-center transition-all hover:shadow-lg">
             <div className="w-16 h-16 flex items-center justify-center mb-4">
-              <svg viewBox="0 0 40 40" className="w-12 h-12">
-                <path fill="#000000" d="M29.63,12.24c-0.66-1.73-3.05-1.73-3.71,0L12.51,37.58c-0.66,1.73,0.66,3.46,2.56,1.14c2.73-2.35,11.37-8.8,17.12-14.27C36.06,21.05,32.86,16.87,29.63,12.24z M28.44,23.08L18.3,31.9l6.05-16.36c0.19-0.48,0.76-0.48,0.95,0l4.07,7.54C29.56,23.47,29.33,23.12,28.44,23.08z"/>
-              </svg>
+               <img 
+                src="https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/claude-color.png" 
+                alt="Claude Logo"
+                className="h-12 w-auto"
+              />
             </div>
             <h4 className="text-lg font-medium text-gray-900">Anthropic Claude</h4>
             <p className="mt-2 text-gray-600">Utilize Claude's nuanced understanding for detailed survey insights.</p>
@@ -47,7 +49,7 @@ const AIIntegrationSection = () => {
             <div className="w-16 h-16 flex items-center justify-center mb-4">
               <img 
                 src="https://th.bing.com/th/id/OIP.vavoc8cDEEF29H7bX8kxjQHaHa" 
-                alt="OpenAI"
+                alt="OpenAI Logo"
                 className="h-12 w-auto"
               />
             </div>
