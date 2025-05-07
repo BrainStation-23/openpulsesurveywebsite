@@ -110,7 +110,7 @@ const AIIntegrationSection = () => {
           </div>
         </div>
       </div>
-
+</div>
   );
 };
 
