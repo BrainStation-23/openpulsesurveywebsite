@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -9,6 +10,7 @@ import React, { useEffect } from "react";
 import { initFacebookPixel } from "@/lib/facebook-pixel";
 import { initHotjar } from "@/lib/hotjar";
 import { initGoogleAnalytics, trackPageView } from "@/lib/google-analytics";
+import { initClarity } from "@/lib/clarity";
 import CookieConsent from "./components/common/CookieConsent";
 
 // Lazy load all pages
@@ -51,6 +53,7 @@ const App = () => {
     initFacebookPixel();
     initHotjar();
     initGoogleAnalytics();
+    initClarity(); // Add Microsoft Clarity initialization
   }, []);
 
   return (
