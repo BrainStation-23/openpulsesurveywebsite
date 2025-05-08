@@ -30,15 +30,6 @@ const UseCaseCard = ({ title, description, steps, testimonial }: UseCaseCardProp
           ))}
         </ol>
         
-        <div className="bg-blue-50 p-6 rounded-lg">
-          <h4 className="font-semibold text-gray-900 mb-2">Results:</h4>
-          <p className="text-gray-700 mb-2">
-            "{testimonial.quote}"
-          </p>
-          <p className="text-sm text-gray-500">
-            — {testimonial.author}, {testimonial.position}
-          </p>
-        </div>
       </div>
     </div>
   );
