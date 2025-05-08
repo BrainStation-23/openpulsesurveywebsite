@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -10,6 +9,7 @@ import React, { useEffect } from "react";
 import { initFacebookPixel } from "@/lib/facebook-pixel";
 import { initHotjar } from "@/lib/hotjar";
 import { initGoogleAnalytics, trackPageView } from "@/lib/google-analytics";
+import CookieConsent from "./components/common/CookieConsent";
 
 // Lazy load all pages
 const Index = React.lazy(() => import("./pages/Index"));
@@ -75,6 +75,7 @@ const App = () => {
             <Route path="*" element={<LazyRoute component={NotFound} />} />
           </Routes>
           <ScrollToTopButton />
+          <CookieConsent />
         </TooltipProvider>
       </BrowserRouter>
     </QueryClientProvider>

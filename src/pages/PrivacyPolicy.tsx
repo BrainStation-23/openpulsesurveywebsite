@@ -1,4 +1,3 @@
-
 import React from "react";
 import Layout from "@/components/layout/Layout";
 import { Separator } from "@/components/ui/separator";
@@ -73,7 +72,7 @@ const PrivacyPolicy = () => {
 
           <h2>Analytics and Tracking</h2>
           <p>
-            Our website uses Facebook Pixel to help us understand how visitors interact with our site and to optimize our marketing efforts. Facebook Pixel may collect information such as:
+            Our website uses Facebook Pixel and Google Analytics to help us understand how visitors interact with our site and to optimize our marketing efforts. These services may collect information such as:
           </p>
           <ul>
             <li>Pages you visit on our website</li>
@@ -81,10 +80,13 @@ const PrivacyPolicy = () => {
             <li>Basic device information and browser type</li>
           </ul>
           <p>
-            We use this information to measure the effectiveness of our ad campaigns and to provide you with more relevant content. Facebook may use cookies to collect this data. Please note that this tracking is limited to our marketing website only - it is not part of the self-hosted Open Pulse Survey platform that you deploy.
+            We use this information to measure the effectiveness of our ad campaigns and to provide you with more relevant content. These services may use cookies to collect this data. Please note that this tracking is limited to our marketing website only - it is not part of the self-hosted Open Pulse Survey platform that you deploy.
           </p>
           <p>
-            You can opt-out of Facebook tracking by adjusting your browser settings to reject cookies or by using browser extensions designed to block tracking scripts.
+            <strong>Your Consent Control:</strong> We provide a cookie consent mechanism that allows you to control whether analytics cookies are used. You can change your preferences at any time by clicking the "Cookie Settings" button at the bottom of our website.
+          </p>
+          <p>
+            You can also opt-out of tracking by adjusting your browser settings to reject cookies or by using browser extensions designed to block tracking scripts.
           </p>
 
           <h2>Security Responsibility Disclaimer</h2>
