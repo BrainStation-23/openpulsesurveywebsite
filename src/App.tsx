@@ -1,13 +1,15 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import ScrollToTop from "./components/common/ScrollToTop";
 import ScrollToTopButton from "./components/common/ScrollToTopButton";
 import LazyRoute from "./components/routing/LazyRoute";
 import React, { useEffect } from "react";
 import { initFacebookPixel } from "@/lib/facebook-pixel";
 import { initHotjar } from "@/lib/hotjar";
+import { initGoogleAnalytics, trackPageView } from "@/lib/google-analytics";
 
 // Lazy load all pages
 const Index = React.lazy(() => import("./pages/Index"));
@@ -32,11 +34,23 @@ const queryClient = new QueryClient({
   },
 });
 
+// Page tracker component
+const PageTracker: React.FC = () => {
+  const location = useLocation();
+  
+  useEffect(() => {
+    trackPageView(location.pathname + location.search);
+  }, [location]);
+  
+  return null;
+};
+
 const App = () => {
   // Initialize tracking tools
   useEffect(() => {
     initFacebookPixel();
     initHotjar();
+    initGoogleAnalytics();
   }, []);
 
   return (
@@ -45,6 +59,7 @@ const App = () => {
         <TooltipProvider>
           <ScrollToTop />
           <Toaster />
+          <PageTracker />
           <Routes>
             <Route path="/" element={<LazyRoute component={Index} />} />
             <Route path="/features" element={<LazyRoute component={Features} />} />
