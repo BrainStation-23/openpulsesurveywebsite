@@ -27,16 +27,7 @@ const TechnicalFAQ = () => {
               Yes, Open Pulse Survey supports integration with LDAP, Active Directory, and other identity providers through standard protocols like OAuth 2.0 and SAML. Supabase's authentication system makes this integration straightforward, allowing you to use your existing user management systems.
             </AccordionContent>
           </AccordionItem>
-          
-          <AccordionItem value="item-3" className="border rounded-lg px-4">
-            <AccordionTrigger className="text-left font-semibold py-4">
-              How does the AI analysis work without sending data externally?
-            </AccordionTrigger>
-            <AccordionContent className="pb-4 pt-0 text-gray-600">
-              Our AI analysis engine is deployed as part of your installation. We use optimized machine learning models that run within your environment using Supabase Edge Functions. No data is sent to external services for processing, ensuring complete data privacy while still providing powerful analytics capabilities.
-            </AccordionContent>
-          </AccordionItem>
-          
+  
           <AccordionItem value="item-4" className="border rounded-lg px-4">
             <AccordionTrigger className="text-left font-semibold py-4">
               What backup and disaster recovery options are available?
