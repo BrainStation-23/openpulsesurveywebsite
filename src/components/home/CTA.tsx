@@ -13,7 +13,7 @@ const CTA = () => {
   };
 
   return (
-    <section className="section bg-blue-600">
+    <section className="section bg-primary">
       <div className="container-tight relative isolate overflow-hidden">
         <div className="mx-auto max-w-2xl md:text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -25,7 +25,7 @@ const CTA = () => {
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Button 
               asChild 
-              className="bg-white text-blue-600 hover:bg-blue-50 text-lg px-8 py-6"
+              className="bg-white text-primary hover:bg-blue-50 text-lg px-8 py-6"
               onClick={handleDemoClick}
             >
               <Link to="/contact">Request a Demo</Link>
@@ -33,7 +33,7 @@ const CTA = () => {
             <Button 
               asChild 
               variant="ghost" 
-              className="text-white hover:bg-blue-500"
+              className="text-white hover:bg-primary/80"
               onClick={handlePricingClick}
             >
               <Link to="/pricing">View Pricing</Link>

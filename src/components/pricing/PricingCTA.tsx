@@ -6,7 +6,7 @@ import { Cloud } from "lucide-react";
 
 const PricingCTA = () => {
   return (
-    <section className="section bg-gradient-to-r from-indigo-600 to-purple-700">
+    <section className="section bg-gradient-to-r from-primary to-primary/80">
       <div className="container-tight">
         <div className="mx-auto max-w-xl text-center">
           <Badge variant="outline" className="mb-4 bg-white/10 text-white border-white/30">Try Managed Cloud</Badge>
@@ -17,13 +17,13 @@ const PricingCTA = () => {
             Companies with 123+ employees can try our Managed Private Cloud solution at no cost. Get full features with dedicated support.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-            <Button asChild className="bg-white text-indigo-600 hover:bg-indigo-50">
+            <Button asChild className="bg-white text-primary hover:bg-indigo-50">
               <Link to="/contact" className="flex items-center">
                 <Cloud className="mr-2 h-5 w-5" />
                 Start Free Cloud Trial
               </Link>
             </Button>
-            <Button asChild variant="outline" className="bg-transparent text-white border-white hover:bg-indigo-500">
+            <Button asChild variant="outline" className="bg-transparent text-white border-white hover:bg-primary/90">
               <Link to="/features">Explore Features</Link>
             </Button>
           </div>

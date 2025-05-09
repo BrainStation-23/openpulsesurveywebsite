@@ -11,7 +11,7 @@ const DemoCTA = () => {
         <p className="text-gray-700 mb-6">
           Our team can provide a personalized demonstration showing how Open Pulse Survey can be tailored to your organization's specific needs.
         </p>
-        <Button asChild className="bg-blue-500 hover:bg-blue-600">
+        <Button asChild>
           <Link to="/contact">Schedule a Demo</Link>
         </Button>
       </div>

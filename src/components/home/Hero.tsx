@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { memo } from 'react';
@@ -10,7 +11,7 @@ const Hero = memo(() => {
         <div className="mx-auto max-w-4xl text-center">
           {/* Adding content-visibility for better rendering performance */}
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-            Secure employee feedback that stays <span className="text-blue-500">within your walls</span>
+            Secure employee feedback that stays <span className="text-primary">within your walls</span>
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto">
             Open Pulse Survey is the self-hosted platform that helps HR professionals and management teams collect, analyze, and act on employee feedback without compromising internal data security.
@@ -19,7 +20,7 @@ const Hero = memo(() => {
             {/* Using fetchpriority for primary CTA */}
             <Button 
               asChild 
-              className="cta-button bg-orange-500 hover:bg-orange-600 text-lg px-8 py-6"
+              className="text-lg px-8 py-6"
               aria-label="Request a demo of Open Pulse Survey"
             >
               <Link to="/contact">Request a Demo</Link>

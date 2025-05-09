@@ -9,7 +9,7 @@ const ContactCTA = () => {
       <p className="text-gray-700 mb-6">
         Our technical team can provide a detailed walkthrough of the architecture and help you plan your deployment strategy for your React and Supabase-based employee feedback platform.
       </p>
-      <Button asChild className="bg-blue-500 hover:bg-blue-600">
+      <Button asChild>
         <Link to="/contact">Contact Our Technical Team</Link>
       </Button>
     </div>

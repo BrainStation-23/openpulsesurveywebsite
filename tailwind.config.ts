@@ -60,7 +60,7 @@ export default {
 					200: '#A7C9FB',
 					300: '#7BAEF9',
 					400: '#4F92F7',
-					500: '#0EA5E9', // Primary blue
+					500: '#0EA5E9', // Previous primary blue
 					600: '#0284C7',
 					700: '#0369A1',
 					800: '#075985',
