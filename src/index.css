@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,8 +14,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 33 100% 50%; /* #FF9C00 primary color */
-    --primary-foreground: 0 0% 98%;
+    --primary: 200 98% 39%; /* Blue 500 */
+    --primary-foreground: 210 40% 98%;
 
     --secondary: 220 13% 91%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -30,7 +31,7 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 33 100% 50%; /* #FF9C00 ring color */
+    --ring: 200 98% 39%; /* Blue 500 */
 
     --radius: 0.5rem;
   }
@@ -70,11 +71,11 @@
   }
 
   .cta-button {
-    @apply bg-primary hover:bg-primary/90 text-white font-medium py-3 px-5 rounded-md transition-colors duration-200 inline-flex items-center justify-center;
+    @apply bg-orange-500 hover:bg-orange-600 text-white font-medium py-3 px-5 rounded-md transition-colors duration-200 inline-flex items-center justify-center;
   }
 
   .cta-button-secondary {
-    @apply bg-white hover:bg-gray-50 text-primary border border-primary font-medium py-3 px-5 rounded-md transition-colors duration-200 inline-flex items-center justify-center;
+    @apply bg-white hover:bg-gray-50 text-blue-500 border border-blue-500 font-medium py-3 px-5 rounded-md transition-colors duration-200 inline-flex items-center justify-center;
   }
 
   .section {

@@ -52,7 +52,7 @@ const Header = () => {
         </div>
 
         <div className="hidden lg:flex lg:items-center lg:gap-x-6">
-          <Button asChild variant="default" size="sm" className="bg-orange-500 hover:bg-orange-600">
+          <Button asChild variant="default" size="sm" className="bg-blue-500 hover:bg-blue-600">
             <Link to="/contact">Request Demo</Link>
           </Button>
         </div>

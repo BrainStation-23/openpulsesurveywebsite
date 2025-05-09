@@ -68,7 +68,7 @@ const PricingCard = () => {
       <Card className="border-2 border-blue-200 shadow-lg transform scale-105 z-10">
         <CardHeader className="text-center bg-blue-50 py-8 relative">
           <div className="absolute -top-4 left-0 right-0">
-            <span className="bg-primary text-white px-4 py-1 rounded-full text-sm font-medium inline-block">
+            <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium inline-block">
               Most Popular
             </span>
           </div>
@@ -85,14 +85,14 @@ const PricingCard = () => {
         
         {/* Free Trial Alert */}
         <div className="mx-6 -mb-3 mt-6">
-          <Alert className="bg-gradient-to-r from-primary/5 to-primary/10 border-primary/20">
-            <Calendar className="h-5 w-5 text-primary" />
-            <AlertTitle className="text-primary/90 text-base font-semibold">3-Month Free Trial</AlertTitle>
+          <Alert className="bg-gradient-to-r from-indigo-50 to-purple-50 border-indigo-200">
+            <Calendar className="h-5 w-5 text-indigo-600" />
+            <AlertTitle className="text-indigo-800 text-base font-semibold">3-Month Free Trial</AlertTitle>
             <AlertDescription>
-              <p className="text-primary/80">
+              <p className="text-indigo-700">
                 Companies with 123+ employees can start with a <span className="font-bold">3-month free trial</span>.
               </p>
-              <Button asChild className="mt-2">
+              <Button asChild className="mt-2 bg-indigo-600 hover:bg-indigo-700">
                 <Link to="/contact">Check Eligibility</Link>
               </Button>
             </AlertDescription>
@@ -124,7 +124,7 @@ const PricingCard = () => {
           
           <div className="mt-6 pt-6 border-t">
             <h3 className="font-semibold text-lg flex items-center gap-2">
-              <ShieldCheck className="h-5 w-5 text-primary" /> 
+              <ShieldCheck className="h-5 w-5 text-blue-600" /> 
               Support & Maintenance
             </h3>
             <p className="mt-2 text-sm text-gray-600">
@@ -134,7 +134,7 @@ const PricingCard = () => {
         </CardContent>
         
         <CardFooter className="flex flex-col space-y-4 pt-0 pb-8">
-          <Button asChild className="w-full py-6 text-lg">
+          <Button asChild className="w-full py-6 text-lg bg-blue-600 hover:bg-blue-700">
             <Link to="/contact">Start Free Trial</Link>
           </Button>
           <p className="text-center text-sm text-gray-500">
@@ -210,7 +210,7 @@ const PricingFeature = ({ title, description }: { title: string; description: st
   return (
     <div className="flex items-start gap-3">
       <div className="flex-shrink-0 h-6 w-6 rounded-full bg-blue-100 flex items-center justify-center">
-        <Check className="h-4 w-4 text-primary" />
+        <Check className="h-4 w-4 text-blue-600" />
       </div>
       <div>
         <p className="font-medium">{title}</p>

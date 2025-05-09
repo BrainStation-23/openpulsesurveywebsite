@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -53,16 +54,13 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				// Custom colors for Open Pulse Survey
-				orange: {
-					500: '#FF9C00', // New primary orange
-				},
 				blue: {
 					50: '#E6F6FF',
 					100: '#D3E4FD',
 					200: '#A7C9FB',
 					300: '#7BAEF9',
 					400: '#4F92F7',
-					500: '#0EA5E9', // Previous primary blue
+					500: '#0EA5E9', // Primary blue
 					600: '#0284C7',
 					700: '#0369A1',
 					800: '#075985',
@@ -79,6 +77,9 @@ export default {
 					700: '#374151',
 					800: '#1F2937',
 					900: '#1A1F2C', // Dark gray
+				},
+				orange: {
+					500: '#F97316', // CTA orange
 				},
 				green: {
 					100: '#F2FCE2', // Soft green
