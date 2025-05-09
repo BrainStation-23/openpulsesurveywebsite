@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -55,6 +56,28 @@
       
       // Also check on any cookie change
       document.addEventListener('visibilitychange', checkAndInitPixel);
+    </script>
+    
+    <!-- Microsoft Clarity with consent check -->
+    <script>
+      // Define clarity initialization function that checks for consent
+      function initClarity() {
+        var consentCookie = document.cookie.match('(^|;)\\s*analytics-consent\\s*=\\s*([^;]+)');
+        var hasConsent = consentCookie ? consentCookie.pop() === 'true' : false;
+        
+        if (hasConsent && typeof window.clarity === 'undefined') {
+          (function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window, document, "clarity", "script", "rgd5umhztu");
+          console.log('Microsoft Clarity initialized with consent');
+        }
+      }
+      
+      // Check on page load and any cookie changes
+      document.addEventListener('DOMContentLoaded', initClarity);
+      document.addEventListener('visibilitychange', initClarity);
     </script>
     
     <!-- SEO and social sharing -->
