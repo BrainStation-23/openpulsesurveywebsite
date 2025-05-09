@@ -11,13 +11,13 @@ const AntiSaas = () => {
       description="Learn about the Open Pulse Survey anti-SaaS philosophy. We believe in self-hosted solutions that keep your employee data secure and within your control."
     >
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-gray-900 to-gray-800 py-24 sm:py-32">
+      <section className="bg-gradient-to-b from-orange-50 to-white py-24 sm:py-32">
         <div className="container-tight">
           <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
               Our Anti-SaaS Philosophy
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-300">
+            <p className="mt-6 text-lg leading-8 text-gray-600">
               Why we believe your employee feedback data should never leave your organization's walls.
             </p>
           </div>
@@ -159,20 +159,20 @@ const AntiSaas = () => {
       </section>
 
       {/* CTA */}
-      <section className="section bg-blue-600">
+      <section className="section bg-primary">
         <div className="container-tight">
           <div className="mx-auto max-w-2xl md:text-center">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Take control of your employee feedback data
             </h2>
-            <p className="mt-6 text-lg leading-8 text-blue-100">
+            <p className="mt-6 text-lg leading-8 text-white/90">
               Learn how Open Pulse Survey can be deployed within your organization's infrastructure.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Button asChild className="bg-white text-blue-600 hover:bg-blue-50">
+              <Button asChild className="bg-white text-primary hover:bg-orange-50">
                 <Link to="/technical">Technical Details</Link>
               </Button>
-              <Button asChild variant="ghost" className="text-white hover:bg-blue-500">
+              <Button asChild variant="ghost" className="text-white hover:bg-primary/80">
                 <Link to="/contact">Request a Demo</Link>
               </Button>
             </div>
