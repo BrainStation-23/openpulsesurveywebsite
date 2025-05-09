@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -14,8 +13,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 210 26% 27%; /* #33475b primary color */
-    --primary-foreground: 210 40% 98%;
+    --primary: 33 100% 50%; /* #FF9C00 primary color */
+    --primary-foreground: 0 0% 98%;
 
     --secondary: 220 13% 91%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -31,7 +30,7 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 210 26% 27%; /* #33475b ring color */
+    --ring: 33 100% 50%; /* #FF9C00 ring color */
 
     --radius: 0.5rem;
   }

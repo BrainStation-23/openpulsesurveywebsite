@@ -13,11 +13,11 @@ const PricingCTA = () => {
           <h2 className="text-3xl font-bold tracking-tight text-white">
             Start your 3-month free trial today
           </h2>
-          <p className="mt-4 text-lg text-indigo-100">
+          <p className="mt-4 text-lg text-white/90">
             Companies with 123+ employees can try our Managed Private Cloud solution at no cost. Get full features with dedicated support.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-            <Button asChild className="bg-white text-primary hover:bg-indigo-50">
+            <Button asChild className="bg-white text-primary hover:bg-orange-50">
               <Link to="/contact" className="flex items-center">
                 <Cloud className="mr-2 h-5 w-5" />
                 Start Free Cloud Trial

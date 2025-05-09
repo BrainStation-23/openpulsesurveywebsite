@@ -19,13 +19,13 @@ const CTA = () => {
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Ready to transform your employee feedback process?
           </h2>
-          <p className="mt-6 text-lg leading-8 text-blue-100">
+          <p className="mt-6 text-lg leading-8 text-white/90">
             Join organizations that prioritize both employee engagement and data security. Open Pulse Survey gives you the tools you need without compromising your internal data.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Button 
               asChild 
-              className="bg-white text-primary hover:bg-blue-50 text-lg px-8 py-6"
+              className="bg-white text-primary hover:bg-orange-50 text-lg px-8 py-6"
               onClick={handleDemoClick}
             >
               <Link to="/contact">Request a Demo</Link>

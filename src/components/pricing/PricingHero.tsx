@@ -5,7 +5,7 @@ import { Calendar } from "lucide-react";
 
 const PricingHero = () => {
   return (
-    <section className="bg-gradient-to-b from-blue-50 to-white py-24 sm:py-32">
+    <section className="bg-gradient-to-b from-orange-50 to-white py-24 sm:py-32">
       <div className="container-tight">
         <div className="mx-auto max-w-2xl text-center">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">

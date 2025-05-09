@@ -11,11 +11,11 @@ const FeaturesCTA = () => {
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             See Open Pulse Survey in action
           </h2>
-          <p className="mt-6 text-lg leading-8 text-blue-100">
+          <p className="mt-6 text-lg leading-8 text-white/90">
             Request a personalized demo to see how our features can work for your organization's specific needs.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
-            <Button asChild className="bg-white text-primary hover:bg-blue-50">
+            <Button asChild className="bg-white text-primary hover:bg-orange-50">
               <Link to="/contact">Request Demo</Link>
             </Button>
             <Button asChild variant="ghost" className="text-white hover:bg-primary/80">
