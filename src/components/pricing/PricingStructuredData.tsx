@@ -19,7 +19,7 @@ const PricingStructuredData = () => {
       {
         "@type": "Offer",
         "name": "Managed Private Cloud",
-        "price": "100",
+        "price": "250",
         "priceCurrency": "USD",
         "description": "Fully managed private cloud solution with dedicated support",
         "availability": "https://schema.org/InStock",
