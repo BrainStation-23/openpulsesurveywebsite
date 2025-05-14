@@ -73,13 +73,6 @@ const PricingCard = () => {
             discountedPrice="$125/month"
             variant="highlight" 
           />
-          <div className="mt-4">
-            <FreeTrialAlert 
-              trialDuration="3-Month" 
-              minEmployees={123}
-              variant="highlight" 
-            />
-          </div>
         </>
       )
     },
