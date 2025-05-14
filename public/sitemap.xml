@@ -1,56 +1,57 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://openpulsesurvey.com/</loc>
-    <lastmod>2025-05-06</lastmod>
+    <lastmod>2025-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://openpulsesurvey.com/features</loc>
-    <lastmod>2025-05-06</lastmod>
+    <lastmod>2025-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://openpulsesurvey.com/pricing</loc>
-    <lastmod>2025-05-06</lastmod>
+    <lastmod>2025-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://openpulsesurvey.com/anti-saas</loc>
-    <lastmod>2025-05-06</lastmod>
+    <lastmod>2025-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://openpulsesurvey.com/use-cases</loc>
-    <lastmod>2025-05-06</lastmod>
+    <lastmod>2025-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://openpulsesurvey.com/technical</loc>
-    <lastmod>2025-05-06</lastmod>
+    <lastmod>2025-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://openpulsesurvey.com/contact</loc>
-    <lastmod>2025-05-06</lastmod>
+    <lastmod>2025-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://openpulsesurvey.com/about-us</loc>
-    <lastmod>2025-05-06</lastmod>
+    <lastmod>2025-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://openpulsesurvey.com/privacy-policy</loc>
-    <lastmod>2025-05-06</lastmod>
+    <lastmod>2025-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

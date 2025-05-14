@@ -1,6 +1,7 @@
 
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const FeatureHighlights = () => {
   return (
@@ -19,22 +20,23 @@ const FeatureHighlights = () => {
         <div className="mt-16 space-y-24">
           {/* Feature 1 - AI Reports */}
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16 items-center">
-            <div className="relative lg:order-2">
-              <div className="rounded-2xl bg-gray-100 aspect-[3/2] overflow-hidden shadow-lg">
-                {/* This would be an actual image in production */}
-                <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-tr from-blue-500/30 to-blue-400/10">
-                  <div className="w-3/4 h-3/4 bg-white rounded-lg shadow-md p-6">
-                    <div className="h-4 w-2/3 bg-blue-100 rounded mb-4"></div>
-                    <div className="h-3 w-1/2 bg-gray-100 rounded mb-3"></div>
-                    <div className="h-3 w-full bg-gray-100 rounded mb-3"></div>
-                    <div className="h-3 w-3/4 bg-gray-100 rounded mb-6"></div>
-                    <div className="h-24 w-full bg-blue-50 rounded mb-4 flex items-center justify-center">
-                      <div className="w-3/4 h-16 bg-blue-500/20 rounded flex items-center justify-center">
-                        <span className="text-blue-500 font-semibold">AI Report Visualization</span>
+            <div className="relative lg:order-2 w-full">
+              <div className="rounded-2xl bg-gray-100 overflow-hidden shadow-lg w-full">
+                <AspectRatio ratio={3/2} className="w-full">
+                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-tr from-blue-500/30 to-blue-400/10">
+                    <div className="w-3/4 h-3/4 bg-white rounded-lg shadow-md p-4 sm:p-6">
+                      <div className="h-4 w-2/3 bg-blue-100 rounded mb-4"></div>
+                      <div className="h-3 w-1/2 bg-gray-100 rounded mb-3"></div>
+                      <div className="h-3 w-full bg-gray-100 rounded mb-3"></div>
+                      <div className="h-3 w-3/4 bg-gray-100 rounded mb-6"></div>
+                      <div className="h-16 sm:h-24 w-full bg-blue-50 rounded mb-4 flex items-center justify-center">
+                        <div className="w-3/4 h-12 sm:h-16 bg-blue-500/20 rounded flex items-center justify-center">
+                          <span className="text-xs sm:text-sm md:text-base text-blue-500 font-semibold px-2 text-center">AI Report Visualization</span>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </AspectRatio>
               </div>
             </div>
             <div>
@@ -69,27 +71,29 @@ const FeatureHighlights = () => {
 
           {/* Feature 2 - Presentation Generation */}
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16 items-center">
-            <div className="relative">
-              <div className="rounded-2xl bg-gray-100 aspect-[3/2] overflow-hidden shadow-lg">
-                <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-tr from-orange-500/20 to-orange-400/5">
-                  <div className="w-3/4 h-3/4 bg-white rounded-lg shadow-md p-6">
-                    <div className="h-4 w-1/2 bg-orange-100 rounded mb-4"></div>
-                    <div className="grid grid-cols-2 gap-4 mb-4">
-                      <div className="h-20 bg-gray-50 rounded flex items-center justify-center">
-                        <span className="text-gray-400 text-sm">Slide 1</span>
-                      </div>
-                      <div className="h-20 bg-gray-50 rounded flex items-center justify-center">
-                        <span className="text-gray-400 text-sm">Slide 2</span>
-                      </div>
-                      <div className="h-20 bg-orange-50 rounded flex items-center justify-center border-2 border-orange-200">
-                        <span className="text-orange-500 text-sm">Current</span>
-                      </div>
-                      <div className="h-20 bg-gray-50 rounded flex items-center justify-center">
-                        <span className="text-gray-400 text-sm">Slide 4</span>
+            <div className="relative w-full">
+              <div className="rounded-2xl bg-gray-100 overflow-hidden shadow-lg w-full">
+                <AspectRatio ratio={3/2} className="w-full">
+                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-tr from-orange-500/20 to-orange-400/5">
+                    <div className="w-3/4 h-3/4 bg-white rounded-lg shadow-md p-4 sm:p-6">
+                      <div className="h-4 w-1/2 bg-orange-100 rounded mb-4"></div>
+                      <div className="grid grid-cols-2 gap-2 sm:gap-4 mb-4">
+                        <div className="h-12 sm:h-20 bg-gray-50 rounded flex items-center justify-center">
+                          <span className="text-xs sm:text-sm text-gray-400">Slide 1</span>
+                        </div>
+                        <div className="h-12 sm:h-20 bg-gray-50 rounded flex items-center justify-center">
+                          <span className="text-xs sm:text-sm text-gray-400">Slide 2</span>
+                        </div>
+                        <div className="h-12 sm:h-20 bg-orange-50 rounded flex items-center justify-center border-2 border-orange-200">
+                          <span className="text-xs sm:text-sm text-orange-500">Current</span>
+                        </div>
+                        <div className="h-12 sm:h-20 bg-gray-50 rounded flex items-center justify-center">
+                          <span className="text-xs sm:text-sm text-gray-400">Slide 4</span>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </AspectRatio>
               </div>
             </div>
             <div>

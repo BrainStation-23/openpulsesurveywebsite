@@ -2,7 +2,7 @@
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Cloud } from "lucide-react";
+import { Cloud, Building } from "lucide-react";
 
 const PricingCTA = () => {
   return (
@@ -26,6 +26,18 @@ const PricingCTA = () => {
             <Button asChild variant="outline" className="bg-transparent text-white border-white hover:bg-indigo-500">
               <Link to="/features">Explore Features</Link>
             </Button>
+          </div>
+          <div className="mt-6">
+            <Badge variant="outline" className="bg-green-500/20 text-white border-green-400/30">For Non-Profits</Badge>
+            <p className="mt-2 text-sm text-white/90">
+              Qualified NGOs receive a 50% discount on our Managed Private Cloud service and Enterprise License.
+              <Button asChild variant="link" className="text-white underline ml-2 p-0 h-auto">
+                <Link to="/contact" className="flex items-center">
+                  <Building className="mr-1 h-4 w-4" />
+                  Learn More
+                </Link>
+              </Button>
+            </p>
           </div>
         </div>
       </div>
