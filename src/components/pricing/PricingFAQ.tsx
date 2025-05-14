@@ -21,10 +21,21 @@ const PricingFAQ = () => {
               </Button>
             </div>
             
+            {/* NGO Discount FAQ */}
+            <div className="bg-white p-6 rounded-lg border-l-4 border-green-500 shadow-md">
+              <h3 className="font-semibold text-xl text-gray-900">How does the NGO discount work?</h3>
+              <p className="mt-2 text-gray-600">
+                We offer a 50% discount on our Managed Private Cloud service for verified non-profit organizations. This brings the monthly cost down to $125 instead of $250. To apply for this discount, contact us with proof of your non-profit status, and we'll set up your discounted plan.
+              </p>
+              <Button asChild variant="outline" className="mt-3 border-green-300 text-green-700 hover:bg-green-50">
+                <Link to="/contact">Apply for NGO Discount</Link>
+              </Button>
+            </div>
+            
             <div>
               <h3 className="font-semibold text-xl text-gray-900">What's the difference between the three pricing tiers?</h3>
               <p className="mt-2 text-gray-600">
-                All tiers offer the same features. The main differences are in how they're deployed and supported. Open Source is free but self-maintained. Managed Private Cloud ($100/month) includes hosting and maintenance. Enterprise ($5,000 one-time) provides lifetime access with initial support and optional ongoing maintenance.
+                All tiers offer the same features. The main differences are in how they're deployed and supported. Open Source is free but self-maintained. Managed Private Cloud ($250/month) includes hosting and maintenance. Enterprise ($5,000 one-time) provides lifetime access with initial support and optional ongoing maintenance.
               </p>
             </div>
 

@@ -2,8 +2,9 @@
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Check, Calendar, ShieldCheck, Users, Github, Cloud, Server } from "lucide-react";
+import { Check, Calendar, ShieldCheck, Users, Github, Cloud, Server, Building } from "lucide-react";
 import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
+import { Badge } from "@/components/ui/badge";
 
 const PricingCard = () => {
   return (
@@ -77,14 +78,30 @@ const PricingCard = () => {
             <CardTitle className="text-2xl font-bold text-blue-700">Managed Private Cloud</CardTitle>
           </div>
           <div className="mt-4">
-            <span className="text-4xl font-bold">$100</span>
+            <span className="text-4xl font-bold">$250</span>
             <span className="text-gray-600 ml-1">/month</span>
           </div>
           <CardDescription className="text-lg mt-2">We handle the infrastructure</CardDescription>
         </CardHeader>
         
-        {/* Free Trial Alert */}
+        {/* NGO Discount Alert */}
         <div className="mx-6 -mb-3 mt-6">
+          <Alert className="bg-gradient-to-r from-green-50 to-teal-50 border-green-200">
+            <Building className="h-5 w-5 text-green-600" />
+            <AlertTitle className="text-green-800 text-base font-semibold">NGO Discount Available</AlertTitle>
+            <AlertDescription>
+              <p className="text-green-700">
+                Non-profit organizations qualify for a <span className="font-bold">50% discount</span> on this plan.
+              </p>
+              <Button asChild className="mt-2 bg-green-600 hover:bg-green-700">
+                <Link to="/contact">Apply for NGO Discount</Link>
+              </Button>
+            </AlertDescription>
+          </Alert>
+        </div>
+        
+        {/* Free Trial Alert */}
+        <div className="mx-6 mt-4">
           <Alert className="bg-gradient-to-r from-indigo-50 to-purple-50 border-indigo-200">
             <Calendar className="h-5 w-5 text-indigo-600" />
             <AlertTitle className="text-indigo-800 text-base font-semibold">3-Month Free Trial</AlertTitle>
