@@ -25,7 +25,7 @@ const PricingFAQ = () => {
             <div className="bg-white p-6 rounded-lg border-l-4 border-green-500 shadow-md">
               <h3 className="font-semibold text-xl text-gray-900">How does the NGO discount work?</h3>
               <p className="mt-2 text-gray-600">
-                We offer a 50% discount on our Managed Private Cloud service for verified non-profit organizations. This brings the monthly cost down to $125 instead of $250. To apply for this discount, contact us with proof of your non-profit status, and we'll set up your discounted plan.
+                We offer a 50% discount on both our Managed Private Cloud service and Enterprise License for verified non-profit organizations. This brings the monthly cloud cost down to $125 (instead of $250) or reduces the one-time enterprise license to $2,500 (instead of $5,000). To apply for this discount, contact us with proof of your non-profit status.
               </p>
               <Button asChild variant="outline" className="mt-3 border-green-300 text-green-700 hover:bg-green-50">
                 <Link to="/contact">Apply for NGO Discount</Link>

@@ -30,7 +30,7 @@ const PricingCTA = () => {
           <div className="mt-6">
             <Badge variant="outline" className="bg-green-500/20 text-white border-green-400/30">For Non-Profits</Badge>
             <p className="mt-2 text-sm text-white/90">
-              Qualified NGOs receive a 50% discount on our Managed Private Cloud service.
+              Qualified NGOs receive a 50% discount on our Managed Private Cloud service and Enterprise License.
               <Button asChild variant="link" className="text-white underline ml-2 p-0 h-auto">
                 <Link to="/contact" className="flex items-center">
                   <Building className="mr-1 h-4 w-4" />

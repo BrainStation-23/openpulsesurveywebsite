@@ -30,7 +30,7 @@ const PricingStructuredData = () => {
         "name": "Enterprise License",
         "price": "5000",
         "priceCurrency": "USD",
-        "description": "One-time enterprise license with lifetime access",
+        "description": "One-time enterprise license with lifetime access and 50% discount for NGOs",
         "availability": "https://schema.org/InStock"
       }
     ]
